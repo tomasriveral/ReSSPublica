@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resspublica"
+version = "0.1"
+description = "RSS feeds for swiss federal and cantonal iniciatives."
+requires-python = ">=3.10"
+
+[project.scripts]
+nixpkgs-notifier = "resspublica:main"
