@@ -14,7 +14,7 @@
     packages.resspublica = pkgs.python314Packages.buildPythonApplication {
       pname = "resspublica";
       version = "0.1";
-      src = ./src;
+      src = ./.;
       pyproject = true;
 
       build-system = with pkgs.python314Packages; [ setuptools ];
