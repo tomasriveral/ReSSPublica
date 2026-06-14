@@ -5,8 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "resspublica"
 version = "0.1"
-description = "RSS feeds for swiss federal and cantonal iniciatives."
+description = "RSS feeds for swiss federal and cantonal initiatives."
 requires-python = ">=3.10"
 
 [project.scripts]
 resspublica = "resspublica:main"
+
+[tool.setuptools]
+py-modules = ["resspublica"]
