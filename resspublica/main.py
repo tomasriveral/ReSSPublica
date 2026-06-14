@@ -27,6 +27,9 @@ def generateFeed(title, description, fileName, language, standards, entries):
         fe.description(item["article")
         fe.summary(item["article")
         fe.content(item["text"])
+    
+    fg.rss_file("./feed/rss/" + language + "/" + fileName + ".xml", pretty=True)
+    fg.atom_file("./feed/atom/" + language + "/" + fileName + ".atom", pretty=True)
 
 def generateFederalFeed():
     sparql = SPARQLWrapper("https://cached.lindas.admin.ch/query")
@@ -69,6 +72,6 @@ def generateFederalFeed():
             }
             feeds[lang].append(item)
     print(feeds["fr"])
-    generateFeed("Initiatives populaires fédérales", "RSS feed des Initiatives populaires fédérales", "initiativesPopulairesFederales.xml", "fr", [ "rss" "atom"], feeds[fr]);
+    generateFeed("Initiatives populaires fédérales", "RSS feed des Initiatives populaires fédérales", "initiativesPopulairesFederales", "fr", [ "rss" "atom"], feeds[fr]);
 def main():
     generateFederalFeed()
