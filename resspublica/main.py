@@ -10,7 +10,10 @@ def generateFeed(title, description, fileName, language, standards, entries):
     time = datetime.now()
     fg = FeedGenerator()
     fg.title(title)
-    fg.link("https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/" + standard + "/" + language  + "/" + fileName)
+    # We need to set a different link between atom and rss. As rss links are easier with feedgen we set fg.link for atom and fg.__rss_link for rss
+    # See https://github.com/lkiesow/python-feedgen/blob/main/feedgen/feed.py#L542
+    fg.link(href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/" + language  + "/" + fileName, rel='self')
+    fg.__rss_link = "https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/rss/" + language  + "/" + fileName
     fg.description(description)
     fg.language(language)
     fg.updated(time)
