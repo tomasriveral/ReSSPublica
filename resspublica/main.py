@@ -86,9 +86,9 @@ def generateFederalFeed():
     )
     
     generateFeed(
-        "Föderale Volksinitiativen",
+        "Eidgenössisch Volksinitiativen",
         "RSS-Feed der föderalen Volksinitiativen",
-        "initiativesPopulairesFederales",
+        "eidgenossischVolksinitiativen",
         "de",
         ["rss", "atom"],
         feeds["de"]
@@ -97,7 +97,7 @@ def generateFederalFeed():
     generateFeed(
         "Iniziative popolari federali",
         "Feed RSS delle iniziative popolari federali",
-        "initiativesPopulairesFederales",
+        "iniziativePopolariFederali",
         "it",
         ["rss", "atom"],
         feeds["it"]
