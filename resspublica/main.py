@@ -2,12 +2,15 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from feedgen.feed import FeedGenerator
 from importlib.resources import files
 from datetime import datetime
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
 
 
 def getValue(row, key):
     return row.get(key, {}).get("value") or None
 def generateFeed(title, description, fileName, language, standards, entries):
-    time = datetime.now()
+    time = datetime.now(ZoneInfo("Europe/Zurich"))
     fg = FeedGenerator()
     fg.title(title)
     # We need to set a different link between atom and rss. As rss links are easier with feedgen we set fg.link for atom and fg.__rss_link for rss
