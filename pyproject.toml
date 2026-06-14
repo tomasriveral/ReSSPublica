@@ -9,4 +9,4 @@ description = "RSS feeds for swiss federal and cantonal iniciatives."
 requires-python = ">=3.10"
 
 [project.scripts]
-nixpkgs-notifier = "resspublica:main"
+resspublica = "resspublica:main"
