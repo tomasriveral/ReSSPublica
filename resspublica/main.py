@@ -29,7 +29,7 @@ def generateFeed(title, description, fileName, language, standards, entries):
         fe.guid(f"initiative-{item['id']}", permalink=False)
         fe.updated(time)
         fe.source({'url': item["url"], 'title': item["source"]})
-        fe.link(url)
+        fe.link(href=item["url"])
         fe.description(item["article"])
         fe.summary(item["article"])
         fe.content(item["text"])
