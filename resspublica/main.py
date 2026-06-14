@@ -5,8 +5,41 @@ from datetime import datetime
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+def getSignatureInfo(start_date_str, lang="fr"):
+    MONTHS = {
+        "fr": ["janvier","février","mars","avril","mai","juin",
+               "juillet","août","septembre","octobre","novembre","décembre"],
+        "de": ["Januar","Februar","März","April","Mai","Juni",
+               "Juli","August","September","Oktober","November","Dezember"],
+        "it": ["gennaio","febbraio","marzo","aprile","maggio","giugno",
+               "luglio","agosto","settembre","ottobre","novembre","dicembre"]
+    }
 
+    texts = {
+        "fr": ("La collecte des signatures a commencé le", "et se terminera vers"),
+        "de": ("Die Unterschriftensammlung begann am", "und endet ungefähr im"),
+        "it": ("La raccolta delle firme è iniziata il", "e terminerà circa nel"),
+    }
 
+    start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
+    end_date = start_date + relativedelta(months=18)
+
+    def format_full(d):
+        if lang == "de":
+            return f"{d.day}. {MONTHS[lang][d.month - 1]} {d.year}"
+        return f"{d.day} {MONTHS[lang][d.month - 1]} {d.year}"
+
+    def format_month_year(d):
+        return f"{MONTHS[lang][d.month - 1]} {d.year}"
+
+    start = format_full(start_date)
+    end = format_month_year(end_date)
+
+    return f"""
+    <p>
+        {texts[lang][0]} {start} {texts[lang][1]} {end}.
+    </p>
+    """.strip()
 def getValue(row, key):
     return row.get(key, {}).get("value") or None
 def generateFeed(title, description, fileName, language, standards, entries):
@@ -30,7 +63,7 @@ def generateFeed(title, description, fileName, language, standards, entries):
         fe.guid(f"initiative-{item['id']}", permalink=False)
         fe.updated(time)
         fe.source({'url': item["url"], 'title': item["source"]})
-        fe.content(f'<p><a href="{item["url"]}">Official page</a></p>{item["text"]}', type="html")
+        fe.content(item["text"], type="html")
     if "rss" in standards:
         fg.rss_file("./feed/rss/" + language + "/" + fileName + ".xml", pretty=True)
     if "atom" in standards:
@@ -70,11 +103,11 @@ def generateFederalFeed():
                 "id": getValue(entry, "id"),
                 "date": getValue(entry, "date"),
                 "title": getValue(entry, "title_" + lang),
-                "article": getValue(entry, "artikel_" + lang),
                 "text": getValue(entry, "text_" + lang),
                 "url": BASE_URLS.get(lang, BASE_URLS["de"]) + str(getValue(entry, "id")),
                 "source": BASE_SOURCE[lang]
             }
+            item["text"] = "<p><a href=\""+item["url"]+"\">Official page</a></p>" +  getSignatureInfo(item["date"], lang) + item["text"]
             feeds[lang].append(item)
     generateFeed(
         "Initiatives populaires fédérales",

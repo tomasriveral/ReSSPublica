@@ -4,21 +4,13 @@ SELECT
   ?id
   ?date
 
-  (GROUP_CONCAT(DISTINCT IF(LANG(?title)="fr", STR(?title), ""); separator=" || ") AS ?title_fr)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?title)="de", STR(?title), ""); separator=" || ") AS ?title_de)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?title)="it", STR(?title), ""); separator=" || ") AS ?title_it)
+  (GROUP_CONCAT(DISTINCT IF(LANG(?title)="fr", STR(?title), ""); separator=" ") AS ?title_fr)
+  (GROUP_CONCAT(DISTINCT IF(LANG(?title)="de", STR(?title), ""); separator=" ") AS ?title_de)
+  (GROUP_CONCAT(DISTINCT IF(LANG(?title)="it", STR(?title), ""); separator=" ") AS ?title_it)
 
-  (GROUP_CONCAT(DISTINCT IF(LANG(?status)="fr", STR(?status), ""); separator=" || ") AS ?status_fr)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?status)="de", STR(?status), ""); separator=" || ") AS ?status_de)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?status)="it", STR(?status), ""); separator=" || ") AS ?status_it)
-
-  (GROUP_CONCAT(DISTINCT IF(LANG(?initiativtext)="fr", STR(?initiativtext), ""); separator=" || ") AS ?text_fr)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?initiativtext)="de", STR(?initiativtext), ""); separator=" || ") AS ?text_de)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?initiativtext)="it", STR(?initiativtext), ""); separator=" || ") AS ?text_it)
-
-  (GROUP_CONCAT(DISTINCT IF(LANG(?artikel)="fr", STR(?artikel), ""); separator=" || ") AS ?artikel_fr)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?artikel)="de", STR(?artikel), ""); separator=" || ") AS ?artikel_de)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?artikel)="it", STR(?artikel), ""); separator=" || ") AS ?artikel_it)
+  (GROUP_CONCAT(DISTINCT IF(LANG(?initiativtext)="fr", STR(?initiativtext), ""); separator=" ") AS ?text_fr)
+  (GROUP_CONCAT(DISTINCT IF(LANG(?initiativtext)="de", STR(?initiativtext), ""); separator=" ") AS ?text_de)
+  (GROUP_CONCAT(DISTINCT IF(LANG(?initiativtext)="it", STR(?initiativtext), ""); separator=" ") AS ?text_it)
 
 WHERE {
   <https://politics.ld.admin.ch/political-rights/popular-initiative/1>
@@ -30,15 +22,11 @@ WHERE {
     <https://politics.ld.admin.ch/political-rights/popular-initiative/id> ?id ;
     <https://politics.ld.admin.ch/political-rights/popular-initiative/sammelbeginn> ?date ;
     <https://politics.ld.admin.ch/political-rights/popular-initiative/titel> ?titleUri ;
-    <https://politics.ld.admin.ch/political-rights/popular-initiative/status> ?statusUri ;
-    <https://politics.ld.admin.ch/political-rights/popular-initiative/initiativtext> ?textUri ;
-    <https://politics.ld.admin.ch/political-rights/popular-initiative/artikelBv> ?articleUri .
+    <https://politics.ld.admin.ch/political-rights/popular-initiative/initiativtext> ?textUri .
 
   ?titleUri schema:name ?title .
-  ?statusUri schema:name ?status .
 
   OPTIONAL { ?textUri schema:name ?initiativtext . }
-  OPTIONAL { ?articleUri schema:name ?artikel . }
 }
 GROUP BY ?id ?date
 ORDER BY DESC(?date)
