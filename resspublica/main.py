@@ -96,6 +96,11 @@ def generateFederalFeed():
         "de": "Bundeskanzlei BK",
         "it": "Cancelleria federale CaF"
     }
+    BASE_PAGE = {
+        "fr": "Page officielle",
+        "de": "Offizielle Seite",
+        "it": "Pagina ufficiale"
+    }
 
     for entry in data:
         for lang in ["fr", "de", "it"]:
@@ -107,7 +112,7 @@ def generateFederalFeed():
                 "url": BASE_URLS.get(lang, BASE_URLS["de"]) + str(getValue(entry, "id")),
                 "source": BASE_SOURCE[lang]
             }
-            item["text"] = "<p><a href=\""+item["url"]+"\">Official page</a></p>" +  getSignatureInfo(item["date"], lang) + item["text"]
+            item["text"] = "<p><a href=\""+item["url"]+"\">" + BASE_PAGE[lang] +"</a></p>" +  getSignatureInfo(item["date"], lang) + item["text"]
             feeds[lang].append(item)
     generateFeed(
         "Initiatives populaires fédérales",
