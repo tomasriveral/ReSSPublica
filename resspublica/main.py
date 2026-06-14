@@ -30,10 +30,9 @@ def generateFeed(title, description, fileName, language, standards, entries):
         fe.guid(f"initiative-{item['id']}", permalink=False)
         fe.updated(time)
         fe.source({'url': item["url"], 'title': item["source"]})
-        fe.link(href=item["url"])
         fe.description(item["article"])
         fe.summary(item["article"])
-        fe.content(item["text"])
+        fe.content(f'<p><a href="{item["url"]}">Official page</a></p>{item["text"]}', type="html")
     if "rss" in standards:
         fg.rss_file("./feed/rss/" + language + "/" + fileName + ".xml", pretty=True)
     if "atom" in standards:
