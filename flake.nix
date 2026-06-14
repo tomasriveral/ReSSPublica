@@ -23,6 +23,7 @@
         sparqlwrapper
         feedgen
       ];
+
       mainProgram = "resspublica.py";
     };
     packages.default = self.packages.${system}.resspublica;

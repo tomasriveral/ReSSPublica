@@ -1,9 +1,15 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 from feedgen.feed import FeedGenerator
+from importlib.resources import files
 
 def generateFederalFeed():
     sparql = SPARQLWrapper("https://cached.lindas.admin.ch/sparql")
-    sparql.setQuery(open("./queries/popular_initiatives.sparql").read())
+
+    query = files("resspublica").joinpath(
+        "queries/federalPopularInitiatives.sparql"
+    ).read_text()
+
+    sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
 
     results = sparql.query().convert()

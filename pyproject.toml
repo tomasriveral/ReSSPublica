@@ -9,7 +9,11 @@ description = "RSS feeds for swiss federal and cantonal initiatives."
 requires-python = ">=3.10"
 
 [project.scripts]
-resspublica = "resspublica:main"
+resspublica = "resspublica.main:main"
 
 [tool.setuptools]
-py-modules = ["resspublica"]
+packages = ["resspublica"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+resspublica = ["queries/*.sparql"]
