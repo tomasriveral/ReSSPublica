@@ -17,6 +17,7 @@ def generateFeed(title, description, fileName, language, standards, entries):
     # See https://github.com/lkiesow/python-feedgen/blob/main/feedgen/feed.py#L542
     fg.link(href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/" + language  + "/" + fileName, rel='self')
     fg.__rss_link = "https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/rss/" + language  + "/" + fileName
+    fg.id("https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/" + language  + "/" + fileName)
     fg.description(description)
     fg.language(language)
     fg.updated(time)
