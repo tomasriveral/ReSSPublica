@@ -3,29 +3,37 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, flake-utils}:
+  flake-utils.lib.eachDefaultSystem (system:
   let
-    systems = [
-      "x86_64-linux"
-      "aarch64-linux"
-      "x86_64-darwin"
-      "aarch64-darwin"
-    ];
-
-    forAllSystems = f:
-      nixpkgs.lib.genAttrs systems (system:
-        f (import nixpkgs { inherit system; }));
+    pkgs = import nixpkgs { inherit system; };
   in {
-    devShells = forAllSystems (pkgs: {
+    packages.resspublica = pkgs.python314Packages.buildPythonApplication {
+      pname = "resspublica";
+      version = "0.1";
+      src = ./src;
+      pyproject = true;
+
+      build-system = with pkgs.python314Packages; [ setuptools ];
+
+      dependencies = with pkgs.python314Packages; [
+        sparqlwrapper
+        feedgen
+      ];
+      mainProgram = "resspublica.py";
+    };
+    packages.default = self.packages.${system}.resspublica;
+    devShells = {
       default = pkgs.mkShell {
         packages = with pkgs; [
           python3
-          python3Packages.sparqlwrapper
-          python3Packages.feedgen
+          python314Packages.sparqlwrapper
+          python314Packages.feedgen
         ];
       };
-    });
-  };
+    };
+  });
 }
