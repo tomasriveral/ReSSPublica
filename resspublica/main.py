@@ -2,7 +2,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from feedgen.feed import FeedGenerator
 from importlib.resources import files
 from datetime import datetime
-from datetime import datetime
+from dateutil.relativedelta import relativedelta
 from zoneinfo import ZoneInfo
 
 def getSignatureInfo(start_date_str, lang="fr"):
