@@ -24,12 +24,13 @@ def generateFeed(title, description, fileName, language, standards, entries):
         fe.updated(time)
         fe.source({'url': item["url"], 'title': item["source"]})
         fe.link(url)
-        fe.description(item["article")
-        fe.summary(item["article")
+        fe.description(item["article"])
+        fe.summary(item["article"])
         fe.content(item["text"])
-    
-    fg.rss_file("./feed/rss/" + language + "/" + fileName + ".xml", pretty=True)
-    fg.atom_file("./feed/atom/" + language + "/" + fileName + ".atom", pretty=True)
+    if "rss" in standards:
+        fg.rss_file("./feed/rss/" + language + "/" + fileName + ".xml", pretty=True)
+    if "atom" in standards:
+        fg.atom_file("./feed/atom/" + language + "/" + fileName + ".atom", pretty=True)
 
 def generateFederalFeed():
     sparql = SPARQLWrapper("https://cached.lindas.admin.ch/query")
@@ -71,7 +72,31 @@ def generateFederalFeed():
                 "source": BASE_SOURCE[lang]
             }
             feeds[lang].append(item)
-    print(feeds["fr"])
-    generateFeed("Initiatives populaires fédérales", "RSS feed des Initiatives populaires fédérales", "initiativesPopulairesFederales", "fr", [ "rss" "atom"], feeds[fr]);
+    generateFeed(
+        "Initiatives populaires fédérales",
+        "Flux RSS des initiatives populaires fédérales",
+        "initiativesPopulairesFederales",
+        "fr",
+        ["rss", "atom"],
+        feeds["fr"]
+    )
+    
+    generateFeed(
+        "Föderale Volksinitiativen",
+        "RSS-Feed der föderalen Volksinitiativen",
+        "initiativesPopulairesFederales",
+        "de",
+        ["rss", "atom"],
+        feeds["de"]
+    )
+    
+    generateFeed(
+        "Iniziative popolari federali",
+        "Feed RSS delle iniziative popolari federali",
+        "initiativesPopulairesFederales",
+        "it",
+        ["rss", "atom"],
+        feeds["it"]
+    )
 def main():
     generateFederalFeed()
