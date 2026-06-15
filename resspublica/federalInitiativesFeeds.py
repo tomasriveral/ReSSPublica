@@ -38,7 +38,8 @@ def generateFederalFeed(CACHE):
     FEDERAL_DB_PATH = CACHE / "federalInitiatives.json"
     db = TinyDB(FEDERAL_DB_PATH)
     q = Query()
-
+    
+    lastUpdateTime = "0000-00-00"
     for entry in data:
         logger.debug(f"Popular initiative {getValue(entry, "title_fr")}")
         item = {
@@ -177,6 +178,7 @@ def generateFederalFeed(CACHE):
             # Constitutional change
             item["text"] += getValue(entry, "text_" + lang)
 
+            lastUpdateTime = max(lastUpdateTime, item["date"].isoformat())
             feeds[lang].append(copy.deepcopy(item))
 
     logging.info("Parsed query. Generating feeds...")
@@ -186,6 +188,7 @@ def generateFederalFeed(CACHE):
         "initiativesPopulairesFederales",
         "fr",
         ["rss", "atom"],
+        lastUpdateTime,
         feeds["fr"]
     )
     
@@ -195,6 +198,7 @@ def generateFederalFeed(CACHE):
         "eidgenossischVolksinitiativen",
         "de",
         ["rss", "atom"],
+        lastUpdateTime,
         feeds["de"]
     )
     
@@ -204,5 +208,6 @@ def generateFederalFeed(CACHE):
         "iniziativePopolariFederali",
         "it",
         ["rss", "atom"],
+        lastUpdateTime,
         feeds["it"]
     )

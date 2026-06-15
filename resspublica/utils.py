@@ -6,9 +6,8 @@ from zoneinfo import ZoneInfo
 import logging
 logger = logging.getLogger("resspublica")
 
-def generateFeed(title, description, fileName, language, standards, entries):
+def generateFeed(title, description, fileName, language, standards, lastUpdateTime, entries):
     logger.info(f"Generating feed {title}")
-    time = datetime.now(ZoneInfo("Europe/Zurich"))
     fg = FeedGenerator()
     fg.title(title)
     # We need to set a different link between atom and rss. As rss links are easier with feedgen we set fg.link for atom and fg.__rss_link for rss
@@ -18,7 +17,9 @@ def generateFeed(title, description, fileName, language, standards, entries):
     fg.id("https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/" + language  + "/" + fileName)
     fg.description(description)
     fg.language(language)
-    fg.updated(time)
+    if not isinstance(lastUpdateTime, datetime):
+        lastUpdateTime = datetime.fromisoformat(lastUpdateTime).replace(tzinfo=ZoneInfo("Europe/Zurich"))
+    fg.updated(lastUpdateTime)
     fg.author({'name': 'ReSSPublica'})
     fg.docs("https://github.com/tomasriveral/ReSSPublica")
 
