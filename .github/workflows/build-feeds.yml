@@ -24,7 +24,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install sparqlwrapper feedgen lxml
+          pip install sparqlwrapper feedgen lxml tinydb
+
+      - name: Set environment variables
+        run: |
+          echo "RESSPUBLICA_CACHE=$GITHUB_WORKSPACE/.cache" >> $GITHUB_ENV
+          mkdir -p "$GITHUB_WORKSPACE/.cache"
 
       - name: Generate feeds
         run: |
@@ -35,7 +40,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add feed/
+          git add feed/ .cache/
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
