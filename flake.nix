@@ -22,7 +22,14 @@
       dependencies = with pkgs.python314Packages; [
         sparqlwrapper
         feedgen
+        tinydb
       ];
+
+      # you will need to point to your local git clone
+      postInstall = ''
+        wrapProgram $out/bin/resspublica \
+          --set RESSPUBLICA_CACHE "/home/tomasr/devel/ReSSPublica/.cache"
+      '';
 
       mainProgram = "resspublica.py";
     };
@@ -33,6 +40,7 @@
           python3
           python314Packages.sparqlwrapper
           python314Packages.feedgen
+          python314Packages.tinydb
         ];
       };
     };

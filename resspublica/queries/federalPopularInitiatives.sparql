@@ -2,17 +2,25 @@ PREFIX schema: <http://schema.org/>
 
 SELECT
   ?id
-  ?date
+  (MIN(?date) AS ?date)
 
-  (GROUP_CONCAT(DISTINCT IF(LANG(?title)="fr", STR(?title), ""); separator=" ") AS ?title_fr)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?title)="de", STR(?title), ""); separator=" ") AS ?title_de)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?title)="it", STR(?title), ""); separator=" ") AS ?title_it)
+  (SAMPLE(?title_fr) AS ?title_fr)
+  (SAMPLE(?title_de) AS ?title_de)
+  (SAMPLE(?title_it) AS ?title_it)
 
-  (GROUP_CONCAT(DISTINCT IF(LANG(?initiativtext)="fr", STR(?initiativtext), ""); separator=" ") AS ?text_fr)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?initiativtext)="de", STR(?initiativtext), ""); separator=" ") AS ?text_de)
-  (GROUP_CONCAT(DISTINCT IF(LANG(?initiativtext)="it", STR(?initiativtext), ""); separator=" ") AS ?text_it)
+  (SAMPLE(?text_fr) AS ?text_fr)
+  (SAMPLE(?text_de) AS ?text_de)
+  (SAMPLE(?text_it) AS ?text_it)
+
+  (SAMPLE(?status_uri) AS ?status_uri)
+
+  (SAMPLE(?zustand_uri) AS ?zustand_uri)
+  (SAMPLE(?zurueckgezogen_uri) AS ?zurueckgezogen_uri)
+  (SAMPLE(?ungueltig_uri) AS ?ungueltig_uri)
+  (SAMPLE(?angenommen_uri) AS ?angenommen_uri)
 
 WHERE {
+
   <https://politics.ld.admin.ch/political-rights/popular-initiative/1>
     <https://cube.link/observationSet> ?obsSet .
 
@@ -22,12 +30,40 @@ WHERE {
     <https://politics.ld.admin.ch/political-rights/popular-initiative/id> ?id ;
     <https://politics.ld.admin.ch/political-rights/popular-initiative/sammelbeginn> ?date ;
     <https://politics.ld.admin.ch/political-rights/popular-initiative/titel> ?titleUri ;
-    <https://politics.ld.admin.ch/political-rights/popular-initiative/initiativtext> ?textUri .
+    <https://politics.ld.admin.ch/political-rights/popular-initiative/initiativtext> ?textUri ;
+    <https://politics.ld.admin.ch/political-rights/popular-initiative/status> ?status_uri .
 
-  ?titleUri schema:name ?title .
+  OPTIONAL { ?source <https://politics.ld.admin.ch/political-rights/popular-initiative/zustandgekommen> ?zustand_uri }
+  OPTIONAL { ?source <https://politics.ld.admin.ch/political-rights/popular-initiative/zurueckgezogen> ?zurueckgezogen_uri }
+  OPTIONAL { ?source <https://politics.ld.admin.ch/political-rights/popular-initiative/ungueltig> ?ungueltig_uri }
+  OPTIONAL { ?source <https://politics.ld.admin.ch/political-rights/popular-initiative/angenommen> ?angenommen_uri }
 
-  OPTIONAL { ?textUri schema:name ?initiativtext . }
+  OPTIONAL {
+    ?titleUri schema:name ?title_fr .
+    FILTER(LANG(?title_fr)="fr")
+  }
+  OPTIONAL {
+    ?titleUri schema:name ?title_de .
+    FILTER(LANG(?title_de)="de")
+  }
+  OPTIONAL {
+    ?titleUri schema:name ?title_it .
+    FILTER(LANG(?title_it)="it")
+  }
+
+  OPTIONAL {
+    ?textUri schema:name ?text_fr .
+    FILTER(LANG(?text_fr)="fr")
+  }
+  OPTIONAL {
+    ?textUri schema:name ?text_de .
+    FILTER(LANG(?text_de)="de")
+  }
+  OPTIONAL {
+    ?textUri schema:name ?text_it .
+    FILTER(LANG(?text_it)="it")
+  }
 }
-GROUP BY ?id ?date
+GROUP BY ?id
 ORDER BY DESC(?date)
-LIMIT 100
+LIMIT 200

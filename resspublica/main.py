@@ -4,6 +4,9 @@ from importlib.resources import files
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from zoneinfo import ZoneInfo
+from tinydb import TinyDB, Query
+from pathlib import Path
+import os
 
 def getSignatureInfo(start_date, lang="fr"):
     MONTHS = {
@@ -16,9 +19,9 @@ def getSignatureInfo(start_date, lang="fr"):
     }
 
     texts = {
-        "fr": ("La collecte des signatures a commencé le", "et se terminera vers"),
-        "de": ("Die Unterschriftensammlung begann am", "und endet ungefähr im"),
-        "it": ("La raccolta delle firme è iniziata il", "e terminerà circa nel"),
+        "fr": ("<p>La collecte des signatures a commencé le", "et se terminera vers</p>"),
+        "de": ("<p>Die Unterschriftensammlung begann am", "und endet ungefähr im</p>"),
+        "it": ("<p>La raccolta delle firme è iniziata il", "e terminerà circa nel</p>"),
     }
 
     end_date = start_date + relativedelta(months=18)
@@ -76,6 +79,8 @@ def generateFederalFeed():
 
     results = sparql.query().convert()
 
+    now = datetime.now(ZoneInfo("Europe/Zurich"))
+
     # remove some of useless json data such as "head": {"vars": [...]}
     data = results["results"]["bindings"]
 
@@ -101,18 +106,195 @@ def generateFederalFeed():
         "it": "Pagina ufficiale"
     }
 
+    message_collecting = {
+        "fr": "<p>La collecte des signatures a commencé et est en cours.</p>",
+        "de": "<p>Die Sammlung der Unterschriften hat begonnen und läuft noch.</p>",
+        "it": "<p>La raccolta delle firme è iniziata ed è in corso.</p>"
+    }
+    
+    message_threshold_reached_waiting_vote = {
+        "fr": "<p>L’initiative a atteint 100'000 signatures et attend la votation.</p>",
+        "de": "<p>Die Initiative hat 100'000 Unterschriften erreicht und wartet auf die Abstimmung.</p>",
+        "it": "<p>L’iniziativa ha raggiunto 100'000 firme ed è in attesa della votazione.</p>"
+    }
+    
+    message_finished_insufficient_signatures = {
+        "fr": "<p>L’initiative n’a pas atteint les 100'000 signatures et la procédure est terminée.</p>",
+        "de": "<p>Die Initiative hat das erforderliche Quorum nicht erreicht und das Verfahren ist abgeschlossen.</p>",
+        "it": "<p>L’iniziativa non ha raggiunto il numero richiesto di firme e la procedura è conclusa.</p>"
+    }
+    
+    message_withdrawn = {
+        "fr": "<p>L’initiative a été retirée.</p>",
+        "de": "<p>Die Initiative wurde zurückgezogen.</p>",
+        "it": "<p>L’iniziativa è stata ritirata.</p>"
+    }
+    
+    message_invalid = {
+        "fr": "<p>L’initiative a été déclarée invalide.</p>",
+        "de": "<p>Die Initiative wurde für ungültig erklärt.</p>",
+        "it": "<p>L’iniziativa è stata dichiarata non valida.</p>"
+    }
+    
+    message_accepted_vote = {
+        "fr": "<p>L’initiative a été acceptée en votation.</p>",
+        "de": "<p>Die Initiative wurde in der Abstimmung angenommen.</p>",
+        "it": "<p>L’iniziativa è stata accettata in votazione.</p>"
+    }
+    
+    message_rejected_vote = {
+        "fr": "<p>L’initiative a été rejetée en votation.</p>",
+        "de": "<p>Die Initiative wurde in der Abstimmung abgelehnt.</p>",
+        "it": "<p>L’iniziativa è stata respinta in votazione.</p>"
+    }
+    message_opened = {
+        "fr": "<p>L’initiative a été lancée le {date}.</p>",
+        "de": "<p>Die Initiative wurde am {date} gestartet.</p>",
+        "it": "<p>L’iniziativa è stata lanciata il {date}.</p>"
+    }
+
+    FEDERAL_DB_PATH = CACHE / "federalInitiatives.json"
+    db = TinyDB(FEDERAL_DB_PATH)
+    q = Query()
+
     for entry in data:
+        creationDate = datetime.strptime(getValue(entry, "date"), "%Y-%m-%d").replace(tzinfo=ZoneInfo("Europe/Zurich"))
+        item = {
+            "id": getValue(entry, "id"),
+            # For status, zustand, zurueckgezogen, ungueltig and angenommen, we just get the URI as we can deduce the info we need from it and it makes queries faster.
+            # status_uri erledigt/haengig main lifecycle state
+            "finished": "erledigt" in getValue(entry, "status_uri")
+        }
+
+        # zustand_uri nein/ja/Undefined valid initiative reached threshold
+        zustand = getValue(entry, "zustand_uri")
+        if "Undefined" in zustand:
+            item["collectedSignature"] = None
+        elif "ja" in zustand:
+            item["collectedSignature"] = True
+        elif "nein" in zustand:
+            item["collectedSignature"] = False
+        else:
+            raise ValueError("Unexpected value in zustand_uri: " + zustand + " (Expected are [...]nein, [...]ja and [...]Undefined)")
+        
+
+        # zurueckgezogen_uri nein/ja/Undefined withdrawal
+        zurueckgezogen = getValue(entry, "zurueckgezogen_uri")
+        if "Undefined" in zustand:
+            item["withdrawn"] = None
+        elif "ja" in zustand:
+            item["withdrawn"] = True
+        elif "nein" in zustand:
+            item["withdrawn"] = False
+        else:
+            raise ValueError("Unexpected value in zurueckgezogen_uri: " + zurueckgezogen + " (Expected are [...]nein, [...]ja and [...]Undefined)")
+
+        # I couldn't find an example for invalided initiatives. So if it is not Undefined we set to true. invalid initiative
+        item["invalid"] = "Undefined" not in getValue(entry, "ungueltig_uri")
+
+        # angenommen_uri nein/ja/Undefined/undefiniert For some reason two types of undefined. accepted in vote
+        angenommen  = getValue(entry, "angenommen_uri")
+        if "Undefined" in angenommen or "undefiniert" in angenommen:
+            item["acceptedInVote"] = None
+        elif  "ja" in angenommen:
+            item["acceptedInVote"] = True
+        elif "nein" in angenommen:
+            item["acceptedInVote"] = False
+        else:
+            raise ValueError("Unexpected value in angenommen_uri: " + angenommen + " (Expected are [...]nein, [...]ja, [...]Undefined and [...]undefiniert)")
+
+        gotFinished = False
+        gotFinalSignatures = False
+        gotInsufficientSignatures = False
+        gotWithdrew = False
+        gotInvalided = False
+        gotAcceptedInVote = False
+        gotRejectedInVote = False
+
+        # if we already got the initiative in the db
+        if db.contains(q.id == item["id"]):
+            oldStatus = db.get(q.id == item["id"])
+
+            if not oldStatus["finished"] and item["finished"]:
+                gotFinished = True
+            if oldStatus["collectedSignature"] == None and item["collectedSignature"]:
+                gotFinalSignatures = True
+            elif oldStatus["collectedSignature"] == None and item["collectedSignature"] == False:
+                gotInsufficientSignatures = True
+            if (oldStatus["withdrawn"] == False or oldStatus["withdrawn"] == None) and item["withdrawn"]:
+                gotWithdrew = True
+            if not oldStatus["invalid"] and item["invalid"]:
+                gotInvalided = True
+            if oldStatus["acceptedInVote"] == None and item["acceptedInVote"]:
+                gotAcceptedInVote = True
+            elif oldStatus["acceptedInVote"] == None and item["acceptedInVote"] == False:
+                gotRejectedInVote = True
+
+            if gotFinished or gotFinalSignatures or gotInsufficientSignatures or gotWithdrew or gotInvalided or gotAcceptedInVote or gotRejectedInVote:
+                item["date"] = now.isoformat()
+                db.upsert(item, q.id == item["id"])
+                item["date"] = now
+            else:
+                item["date"] = oldStatus["date"].fromisoformat()
+        else:
+            item["date"] = creationDate.isoformat()
+            db.upsert(item, q.id == item["id"])
+            item["date"] = creationDate
+
         for lang in ["fr", "de", "it"]:
-            item = {
-                "id": getValue(entry, "id"),
-                "date": datetime.strptime(getValue(entry, "date"), "%Y-%m-%d").replace(tzinfo=ZoneInfo("Europe/Zurich")),
-                "title": getValue(entry, "title_" + lang),
-                "text": getValue(entry, "text_" + lang),
-                "url": BASE_URLS.get(lang, BASE_URLS["de"]) + str(getValue(entry, "id")),
-                "source": BASE_SOURCE[lang]
-            }
-            item["text"] = "<p><a href=\""+item["url"]+"\">" + BASE_PAGE[lang] +"</a></p>" +  getSignatureInfo(item["date"], lang) + item["text"]
+            item["title"] = getValue(entry, "title_" + lang)
+            item["url"] = BASE_URLS.get(lang, BASE_URLS["de"]) + str(getValue(entry, "id"))
+            item["source"] = BASE_SOURCE[lang]
+
+            # We need to construct the text part in three phases:
+            # 1. Hyperlink to official page and initial start date
+            # 2. status phrase
+            # 3. constitutional change
+
+
+            # Hyperlink to official page and initial start date
+            item["text"] = "<p><a href=\""+item["url"]+"\">" + BASE_PAGE[lang] +"</a></p>" +  getSignatureInfo(item["date"], lang) + message_opened[lang].format(date=creationDate)
+            
+            # Status phrase
+            if gotWithdrew:
+                item["text"] += message_withdrawn[lang]
+            
+            elif gotInvalided:
+                item["text"] += message_invalid[lang]
+            
+            elif gotRejectedInVote:
+                item["text"] += message_rejected_vote[lang]
+            
+            elif gotAcceptedInVote:
+                item["text"] += message_accepted_vote[lang]
+            
+            elif gotFinalSignatures:
+                item["text"] += message_threshold_reached_waiting_vote[lang]
+            
+            elif gotInsufficientSignatures:
+                item["text"] += message_finished_insufficient_signatures[lang]
+            
+            elif not gotFinalSignatures and not gotFinished:
+                item["text"] += getSignatureInfo(creationDate, lang)
+            
+            else:
+                raise ValueError(
+                    "Invalid initiative state combination: "
+                    f"gotWithdrew={gotWithdrew}, "
+                    f"gotInvalided={gotInvalided}, "
+                    f"gotRejectedInVote={gotRejectedInVote}, "
+                    f"gotAcceptedInVote={gotAcceptedInVote}, "
+                    f"gotFinished={gotFinished}, "
+                    f"gotFinalSignatures={gotFinalSignatures}, "
+                    f"gotInsufficientSignatures={gotInsufficientSignatures}"
+                )
+
+            # Constitutional change
+            item["text"] += getValue(entry, "text_" + lang)
+
             feeds[lang].append(item)
+
+
     generateFeed(
         "Initiatives populaires fédérales",
         "Flux RSS des initiatives populaires fédérales",
@@ -140,4 +322,7 @@ def generateFederalFeed():
         feeds["it"]
     )
 def main():
+    global CACHE
+    CACHE = Path(os.environ.get("RESSPUBLICA_CACHE", ".cache"))
+    CACHE.mkdir(parents=True, exist_ok=True)
     generateFederalFeed()
