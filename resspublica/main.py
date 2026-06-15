@@ -7,6 +7,11 @@ from zoneinfo import ZoneInfo
 from tinydb import TinyDB, Query
 from pathlib import Path
 import os
+import copy
+import argparse
+import logging
+
+logger = logging.getLogger("resspublica")
 
 def getSignatureInfo(start_date, lang="fr"):
     MONTHS = {
@@ -23,7 +28,8 @@ def getSignatureInfo(start_date, lang="fr"):
         "de": ("<p>Die Unterschriftensammlung begann am", "und endet ungefähr im</p>"),
         "it": ("<p>La raccolta delle firme è iniziata il", "e terminerà circa nel</p>"),
     }
-
+    if not isinstance(start_date, datetime):
+        start_date = datetime.fromisoformat(start_date).replace(tzinfo=ZoneInfo("Europe/Zurich"))
     end_date = start_date + relativedelta(months=18)
 
     def format_full(d):
@@ -72,6 +78,8 @@ def generateFeed(title, description, fileName, language, standards, entries):
         fg.atom_file("./feed/atom/" + language + "/" + fileName + ".atom", pretty=True)
 
 def generateFederalFeed():
+
+    logger.info("Making th SPARQL query")
     sparql = SPARQLWrapper("https://cached.lindas.admin.ch/query")
     query = files("resspublica.queries").joinpath("federalPopularInitiatives.sparql").read_text()
     sparql.setQuery(query)
@@ -79,6 +87,8 @@ def generateFederalFeed():
 
     results = sparql.query().convert()
 
+    logger.info("Query succesfully returned. Processing the feeds.")
+    
     now = datetime.now(ZoneInfo("Europe/Zurich"))
 
     # remove some of useless json data such as "head": {"vars": [...]}
@@ -158,16 +168,21 @@ def generateFederalFeed():
     q = Query()
 
     for entry in data:
+        logger.debug(f"Popular initiative {getValue(entry, "title_fr")}")
         creationDate = datetime.strptime(getValue(entry, "date"), "%Y-%m-%d").replace(tzinfo=ZoneInfo("Europe/Zurich"))
         item = {
             "id": getValue(entry, "id"),
             # For status, zustand, zurueckgezogen, ungueltig and angenommen, we just get the URI as we can deduce the info we need from it and it makes queries faster.
             # status_uri erledigt/haengig main lifecycle state
-            "finished": "erledigt" in getValue(entry, "status_uri")
+            "finished": "erledigt" in getValue(entry, "status_uri"),
+            "date": getValue(entry, "date")
         }
+        logger.debug(f"status_uri {getValue(entry, "status_uri")}")
+        logger.debug(f"finished {str(item["finished"])}")
 
         # zustand_uri nein/ja/Undefined valid initiative reached threshold
         zustand = getValue(entry, "zustand_uri")
+        logger.debug(f"zustand_uri: {zustand}")
         if "Undefined" in zustand:
             item["collectedSignature"] = None
         elif "ja" in zustand:
@@ -177,23 +192,29 @@ def generateFederalFeed():
         else:
             raise ValueError("Unexpected value in zustand_uri: " + zustand + " (Expected are [...]nein, [...]ja and [...]Undefined)")
         
+        logger.debug(f"collectedSignature {str(item["collectedSignature"])}")
 
         # zurueckgezogen_uri nein/ja/Undefined withdrawal
         zurueckgezogen = getValue(entry, "zurueckgezogen_uri")
-        if "Undefined" in zustand:
+        logger.debug(f"zurueckgezogen_uri {getValue(entry, "zurueckgezogen_uri")}")
+        if "Undefined" in zurueckgezogen:
             item["withdrawn"] = None
-        elif "ja" in zustand:
+        elif "ja" in zurueckgezogen:
             item["withdrawn"] = True
-        elif "nein" in zustand:
+        elif "nein" in zurueckgezogen:
             item["withdrawn"] = False
         else:
             raise ValueError("Unexpected value in zurueckgezogen_uri: " + zurueckgezogen + " (Expected are [...]nein, [...]ja and [...]Undefined)")
+        logger.debug(f"withdrawn {str(item["withdrawn"])}")
 
         # I couldn't find an example for invalided initiatives. So if it is not Undefined we set to true. invalid initiative
+        logger.debug(f"ungueltig_uri {getValue(entry, "ungueltig_uri")}")
         item["invalid"] = "Undefined" not in getValue(entry, "ungueltig_uri")
+        logger.debug(f"invalid {str(item["invalid"])}")
 
         # angenommen_uri nein/ja/Undefined/undefiniert For some reason two types of undefined. accepted in vote
         angenommen  = getValue(entry, "angenommen_uri")
+        logger.debug(f"angenommen_uri {getValue(entry, "angenommen_uri")}")
         if "Undefined" in angenommen or "undefiniert" in angenommen:
             item["acceptedInVote"] = None
         elif  "ja" in angenommen:
@@ -202,47 +223,37 @@ def generateFederalFeed():
             item["acceptedInVote"] = False
         else:
             raise ValueError("Unexpected value in angenommen_uri: " + angenommen + " (Expected are [...]nein, [...]ja, [...]Undefined and [...]undefiniert)")
-
-        gotFinished = False
-        gotFinalSignatures = False
-        gotInsufficientSignatures = False
-        gotWithdrew = False
-        gotInvalided = False
-        gotAcceptedInVote = False
-        gotRejectedInVote = False
+        
+        logger.debug(f"acceptedInVote {str(item["acceptedInVote"])}")
 
         # if we already got the initiative in the db
         if db.contains(q.id == item["id"]):
             oldStatus = db.get(q.id == item["id"])
+            needsUpdate = False
 
-            if not oldStatus["finished"] and item["finished"]:
-                gotFinished = True
-            if oldStatus["collectedSignature"] == None and item["collectedSignature"]:
-                gotFinalSignatures = True
-            elif oldStatus["collectedSignature"] == None and item["collectedSignature"] == False:
-                gotInsufficientSignatures = True
-            if (oldStatus["withdrawn"] == False or oldStatus["withdrawn"] == None) and item["withdrawn"]:
-                gotWithdrew = True
-            if not oldStatus["invalid"] and item["invalid"]:
-                gotInvalided = True
-            if oldStatus["acceptedInVote"] == None and item["acceptedInVote"]:
-                gotAcceptedInVote = True
-            elif oldStatus["acceptedInVote"] == None and item["acceptedInVote"] == False:
-                gotRejectedInVote = True
+            if {k: oldStatus.get(k) for k in oldStatus if k != "date"} != {k: item.get(k) for k in item if k != "date"}:
+                needsUpdate = True
 
-            if gotFinished or gotFinalSignatures or gotInsufficientSignatures or gotWithdrew or gotInvalided or gotAcceptedInVote or gotRejectedInVote:
+            if needsUpdate:
                 item["date"] = now.isoformat()
-                db.upsert(item, q.id == item["id"])
-                item["date"] = now
             else:
-                item["date"] = oldStatus["date"].fromisoformat()
-        else:
-            item["date"] = creationDate.isoformat()
+                item["date"] = oldStatus["date"]
             db.upsert(item, q.id == item["id"])
-            item["date"] = creationDate
+            item["date"] = datetime.fromisoformat(item["date"]).replace(tzinfo=ZoneInfo("Europe/Zurich"))
+        else:
+            # if we don't have it:
+            # if still in signature phase -> creationDate
+            # if not -> now
+            item["date"] = creationDate.isoformat()
 
+            db.upsert(item, q.id == item["id"])
+            item["date"] = datetime.fromisoformat(item["date"]).replace(tzinfo=ZoneInfo("Europe/Zurich"))
+
+            logger.debug(f"date {item["date"].isoformat()}")
         for lang in ["fr", "de", "it"]:
             item["title"] = getValue(entry, "title_" + lang)
+            if item["title"] == None:
+                item["title"] = "Missing data"
             item["url"] = BASE_URLS.get(lang, BASE_URLS["de"]) + str(getValue(entry, "id"))
             item["source"] = BASE_SOURCE[lang]
 
@@ -253,46 +264,48 @@ def generateFederalFeed():
 
 
             # Hyperlink to official page and initial start date
-            item["text"] = "<p><a href=\""+item["url"]+"\">" + BASE_PAGE[lang] +"</a></p>" +  getSignatureInfo(item["date"], lang) + message_opened[lang].format(date=creationDate)
+            item["text"] = "<p><a href=\""+item["url"]+"\">" + BASE_PAGE[lang] +"</a></p>" 
+            if item["collectedSignature"] == None: # avoid being redundant with the start date
+                item["text"] += getSignatureInfo(creationDate, lang)
+            else:
+                item["text"] += message_opened[lang].format(date=creationDate.date())
             
             # Status phrase
-            if gotWithdrew:
+            if item["withdrawn"] == True:
                 item["text"] += message_withdrawn[lang]
             
-            elif gotInvalided:
+            elif item["invalid"] == True:
                 item["text"] += message_invalid[lang]
             
-            elif gotRejectedInVote:
+            elif item["acceptedInVote"] == False:
                 item["text"] += message_rejected_vote[lang]
             
-            elif gotAcceptedInVote:
+            elif item["acceptedInVote"] == True:
                 item["text"] += message_accepted_vote[lang]
             
-            elif gotFinalSignatures:
+            elif item["collectedSignature"] == True:
                 item["text"] += message_threshold_reached_waiting_vote[lang]
             
-            elif gotInsufficientSignatures:
+            elif item["collectedSignature"] == False:
                 item["text"] += message_finished_insufficient_signatures[lang]
             
-            elif not gotFinalSignatures and not gotFinished:
+            elif item["collectedSignature"] == None:
                 item["text"] += getSignatureInfo(creationDate, lang)
             
             else:
                 raise ValueError(
                     "Invalid initiative state combination: "
-                    f"gotWithdrew={gotWithdrew}, "
-                    f"gotInvalided={gotInvalided}, "
-                    f"gotRejectedInVote={gotRejectedInVote}, "
-                    f"gotAcceptedInVote={gotAcceptedInVote}, "
-                    f"gotFinished={gotFinished}, "
-                    f"gotFinalSignatures={gotFinalSignatures}, "
-                    f"gotInsufficientSignatures={gotInsufficientSignatures}"
+                    f"item[\"withdrawn\"]={item["withdrawn"]}, "
+                    f"item[\"invalid\"]={item["invalid"]}, "
+                    f"item[\"acceptedInVote\"]={item["acceptedInVote"]}, "
+                    f"item[\"collectedSignature\"]={item["collectedSignature"]}, "
+                    f"item[\"finished\"]={item["finished"]}"
                 )
 
             # Constitutional change
             item["text"] += getValue(entry, "text_" + lang)
 
-            feeds[lang].append(item)
+            feeds[lang].append(copy.deepcopy(item))
 
 
     generateFeed(
@@ -321,8 +334,21 @@ def generateFederalFeed():
         ["rss", "atom"],
         feeds["it"]
     )
+
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--verbose", action="store_true", help="Enable debug logging")
+    args = parser.parse_args()
+
+    logging.basicConfig(
+        level=logging.DEBUG if args.verbose else logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s"
+    )
+
     global CACHE
     CACHE = Path(os.environ.get("RESSPUBLICA_CACHE", ".cache"))
     CACHE.mkdir(parents=True, exist_ok=True)
+
+    logging.info("Starting feed generation")
     generateFederalFeed()
+    logging.info("Done")
