@@ -88,6 +88,7 @@ def generateFederalFeed():
     results = sparql.query().convert()
 
     logger.info("Query succesfully returned. Processing the feeds.")
+    logger.info(f"Lenght of the return: {len(results["results"]["bindings"])}\nShould be greater or equal than 550 if the query limit wasn't overriden.")
     
     now = datetime.now(ZoneInfo("Europe/Zurich"))
 
