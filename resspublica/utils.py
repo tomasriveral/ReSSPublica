@@ -26,7 +26,12 @@ def generateFeed(title, description, fileName, language, standards, entries):
         fe = fg.add_entry()
         fe.title(item["title"])
         fe.guid(f"initiative-{item['id']}", permalink=False)
-        fe.pubDate(item["date"])
+        if not isinstance(item["date"], datetime):
+            item["date"] = datetime.fromisoformat(item["date"]).replace(tzinfo=ZoneInfo("Europe/Zurich"))
+        fe.updated(item["date"])
+        if not isinstance(item["creationDate"], datetime):
+            item["creationDate"] = datetime.fromisoformat(item["creationDate"]).replace(tzinfo=ZoneInfo("Europe/Zurich"))
+        fe.pubDate(item["creationDate"])
         fe.source({'url': item["url"], 'title': item["source"]})
         fe.content(item["text"], type="html")
     if "rss" in standards:
@@ -39,6 +44,7 @@ def generateFeed(title, description, fileName, language, standards, entries):
         logger.debug("./feed/atom/" + language + "/" + fileName + ".atom")
 
     logger.debug("Finished generating feeds")
+
 def getSignatureInfo(start_date, lang="fr"):
     if not isinstance(start_date, datetime):
         start_date = datetime.fromisoformat(start_date).replace(tzinfo=ZoneInfo("Europe/Zurich"))

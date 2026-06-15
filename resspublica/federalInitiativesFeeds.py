@@ -41,13 +41,13 @@ def generateFederalFeed(CACHE):
 
     for entry in data:
         logger.debug(f"Popular initiative {getValue(entry, "title_fr")}")
-        creationDate = datetime.strptime(getValue(entry, "date"), "%Y-%m-%d").replace(tzinfo=ZoneInfo("Europe/Zurich"))
         item = {
             "id": getValue(entry, "id"),
             # For status, zustand, zurueckgezogen, ungueltig and angenommen, we just get the URI as we can deduce the info we need from it and it makes queries faster.
             # status_uri erledigt/haengig main lifecycle state
             "finished": "erledigt" in getValue(entry, "status_uri"),
-            "date": getValue(entry, "date")
+            "date": getValue(entry, "date"),
+            "creationDate": getValue(entry, "date") 
         }
         logger.debug(f"status_uri {getValue(entry, "status_uri")}")
         logger.debug(f"finished {str(item["finished"])}")
@@ -116,7 +116,7 @@ def generateFederalFeed(CACHE):
             # if we don't have it:
             # if still in signature phase -> creationDate
             # if not -> now
-            item["date"] = creationDate.isoformat()
+            item["date"] = item["creationDate"]
 
             db.upsert(item, q.id == item["id"])
             item["date"] = datetime.fromisoformat(item["date"]).replace(tzinfo=ZoneInfo("Europe/Zurich"))
@@ -138,9 +138,9 @@ def generateFederalFeed(CACHE):
             # Hyperlink to official page and initial start date
             item["text"] = "<p><a href=\""+item["url"]+"\">" + translatedOfficialPage[lang] +"</a></p>" 
             if item["collectedSignature"] == None: # avoid being redundant with the start date
-                item["text"] += getSignatureInfo(creationDate, lang)
+                item["text"] += getSignatureInfo(item["creationDate"], lang)
             else:
-                item["text"] += translatedInitiativeStarted[lang].format(date=creationDate.date())
+                item["text"] += translatedInitiativeStarted[lang].format(date=item["creationDate"])
             
             # Status phrase
             if item["withdrawn"] == True:
@@ -162,7 +162,7 @@ def generateFederalFeed(CACHE):
                 item["text"] += translatedEndDateAndInsufficientSignatures[lang]
             
             elif item["collectedSignature"] == None:
-                item["text"] += getSignatureInfo(creationDate, lang)
+                item["text"] += getSignatureInfo(item["creationDate"], lang)
             
             else:
                 raise ValueError(
