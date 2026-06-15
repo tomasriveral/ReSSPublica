@@ -5,7 +5,7 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from zoneinfo import ZoneInfo
 
-def getSignatureInfo(start_date_str, lang="fr"):
+def getSignatureInfo(start_date, lang="fr"):
     MONTHS = {
         "fr": ["janvier","février","mars","avril","mai","juin",
                "juillet","août","septembre","octobre","novembre","décembre"],
@@ -21,7 +21,6 @@ def getSignatureInfo(start_date_str, lang="fr"):
         "it": ("La raccolta delle firme è iniziata il", "e terminerà circa nel"),
     }
 
-    start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
     end_date = start_date + relativedelta(months=18)
 
     def format_full(d):
@@ -61,7 +60,7 @@ def generateFeed(title, description, fileName, language, standards, entries):
         fe = fg.add_entry()
         fe.title(item["title"])
         fe.guid(f"initiative-{item['id']}", permalink=False)
-        fe.updated(time)
+        fe.updated(item["date"])
         fe.source({'url': item["url"], 'title': item["source"]})
         fe.content(item["text"], type="html")
     if "rss" in standards:
@@ -106,7 +105,7 @@ def generateFederalFeed():
         for lang in ["fr", "de", "it"]:
             item = {
                 "id": getValue(entry, "id"),
-                "date": getValue(entry, "date"),
+                "date": datetime.strptime(getValue(entry, "date"), "%Y-%m-%d").replace(tzinfo=ZoneInfo("Europe/Zurich")),
                 "title": getValue(entry, "title_" + lang),
                 "text": getValue(entry, "text_" + lang),
                 "url": BASE_URLS.get(lang, BASE_URLS["de"]) + str(getValue(entry, "id")),
