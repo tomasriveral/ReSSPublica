@@ -1,4 +1,16 @@
-def generateFederalFeed():
+from SPARQLWrapper import SPARQLWrapper, JSON
+import copy
+from importlib.resources import files
+from tinydb import TinyDB, Query
+from datetime import datetime
+from zoneinfo import ZoneInfo
+from .utils import *
+from .translations import *
+
+import logging
+logger = logging.getLogger("resspublica")
+
+def generateFederalFeed(CACHE):
 
     logger.info("Making th SPARQL query")
     sparql = SPARQLWrapper("https://cached.lindas.admin.ch/query")
@@ -114,7 +126,7 @@ def generateFederalFeed():
             item["title"] = getValue(entry, "title_" + lang)
             if item["title"] == None:
                 item["title"] = "Missing data"
-            item["url"] = translatedFederalPopularInititivesUrls.get(lang, translatedFederalPopularInititivesUrls["de"]) + str(getValue(entry, "id"))
+            item["url"] = translatedFederalPopularInitiativesUrls.get(lang, translatedFederalPopularInitiativesUrls["de"]) + str(getValue(entry, "id"))
             item["source"] = translatedFederalChancellery[lang]
 
             # We need to construct the text part in three phases:

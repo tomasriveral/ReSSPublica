@@ -1,20 +1,16 @@
-from SPARQLWrapper import SPARQLWrapper, JSON
-from importlib.resources import files
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
-from zoneinfo import ZoneInfo
-from tinydb import TinyDB, Query
 from pathlib import Path
 import os
-import copy
 import argparse
 import logging
 
-import .utils
-import .translations
-import .federalInitiativesFeeds
+from .translations import *
 
 logger = logging.getLogger("resspublica")
+
+from .utils import *
+from .federalInitiativesFeeds import *
+from .translations import *
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -26,10 +22,9 @@ def main():
         format="%(asctime)s [%(levelname)s] %(message)s"
     )
 
-    global CACHE
     CACHE = Path(os.environ.get("RESSPUBLICA_CACHE", ".cache"))
     CACHE.mkdir(parents=True, exist_ok=True)
 
     logging.info("Starting feed generation")
-    generateFederalFeed()
+    generateFederalFeed(CACHE)
     logging.info("Done")
