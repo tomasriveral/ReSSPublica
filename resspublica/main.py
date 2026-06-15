@@ -60,7 +60,7 @@ def generateFeed(title, description, fileName, language, standards, entries):
         fe = fg.add_entry()
         fe.title(item["title"])
         fe.guid(f"initiative-{item['id']}", permalink=False)
-        fe.updated(item["date"])
+        fe.pubDate(item["date"])
         fe.source({'url': item["url"], 'title': item["source"]})
         fe.content(item["text"], type="html")
     if "rss" in standards:
