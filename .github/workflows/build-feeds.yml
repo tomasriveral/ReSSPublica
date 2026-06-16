@@ -11,6 +11,11 @@ on:
         required: false
         default: "false"
         type: boolean
+      forceGenerationBernAsianHornetSightings:
+        description: "Generate even when it's not monday"
+        required: false
+        default: "false"
+        type: boolean
 
 jobs:
   build:
@@ -31,32 +36,58 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install .
-
-      - name: Prepare cache directory
-        run: |
-          echo "RESSPUBLICA_CACHE=$GITHUB_WORKSPACE/.cache" >> $GITHUB_ENV
-          mkdir -p "$GITHUB_WORKSPACE/.cache"
-
-      - name: Generate feeds
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.verbose }}" = "true" ]; then
-            echo "Running in VERBOSE mode"
-            resspublica --verbose
-          else
-            resspublica
-          fi
-
-      - name: Commit and push changes
+      -- name: Configure git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add feed/ .cache/
+      - name: Preparing ENV variables
+        run: |
+          echo "RESSPUBLICA_CACHE=$GITHUB_WORKSPACE/.cache" >> $GITHUB_ENV
+          echo "RESSPUBLICA_ASSETS=$GITHUB_WORKSPACE/assets" >> $GITHUB_ENV
+          mkdir -p "$RESSPUBLICA_CACHE"
+          mkdir -p "$RESSPUBLICA_ASSETS"
 
+      - name: Generate feeds for federal popular initiatives
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.verbose }}" = "true" ]; then
+            echo "Running in VERBOSE mode"
+            resspublica --verbose --gen_federalInitiatives
+          else
+            resspublica --gen_federalInitiatives
+          fi
+          git add feed/ .cache/
+          
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
 
-          git commit -m "feeds: update $(date -u +%Y-%m-%d)"
+          git commit -m "feeds: federal popular initiatives update $(date -u +%Y-%m-%d)"
+      - name: Generate feeds for asian hornets sighting in Bern
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.verbose }}" = "true" ]; then
+            echo "Running in VERBOSE mode"
+            if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.forceGenerationBernAsianHornetSightings }}" = "true" ]; then
+              resspublica --force_gen_bernAsianHornets --verbose
+            else
+              resspublica --gen_bernAsianHornets --verbose
+            fi
+          else
+            if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.forceGenerationBernAsianHornetSightings }}" = "true" ]; then
+              resspublica --force_gen_bernAsianHornets
+            else
+              resspublica --gen_bernAsianHornets
+            fi
+          fi
+          git add feed/ .cache/ assets/
+          
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "feeds: asian hornets sighting in Bern update $(date -u +%Y-%m-%d)"
+      - name: Push changes
+        run: |
           git push origin main
