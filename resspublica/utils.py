@@ -4,6 +4,7 @@ from dateutil.relativedelta import relativedelta
 from zoneinfo import ZoneInfo
 from io import BytesIO
 import pycurl
+from time import sleep
 
 from .translations import *
 

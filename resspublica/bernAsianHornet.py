@@ -70,7 +70,7 @@ def generateBernAsianHornetFeed(ASSETS, CACHE):
     # We create a weekly image
     # We just need to check if we haven't already created it
     for start, end in weeklyRangesFrom(arbitraryStartDate): # arbitrary start date
-        if Path( CACHE / f"bernASianHornets-fr-{start.isoformat()}-{end.isoformat()}.png").exists(): # we only check french, but if one language exists the other ones should also
+        if Path( CACHE / f"bernAsianHornets-fr-{start.isoformat()}-{end.isoformat()}.png").exists(): # we only check french, but if one language exists the other ones should also
             logger.debug(f"Week {start.isoformat()}-{end.isoformat()} was already cached. Skipping...")
             continue
         logger.debug(f"Generating week {start.isoformat()}-{end.isoformat()} ...")
@@ -112,7 +112,7 @@ def generateBernAsianHornetFeed(ASSETS, CACHE):
             plt.title(f"{translatedBernAsianHornetSightings[lang]} {start.isoformat()} - {end.isoformat()}")
             plt.axis("off")
             #plt.show()
-            plt.savefig(CACHE / f"bernASianHornets-{lang}-{start.isoformat()}-{end.isoformat()}.png", dpi=120, bbox_inches="tight")
+            plt.savefig(CACHE / f"bernAsianHornets-{lang}-{start.isoformat()}-{end.isoformat()}.png", dpi=120, bbox_inches="tight")
         logger.info("Finished creating images for Bern Asian Hornet Feeds. Preparing feed...")
     feeds = {
         "fr": [],
@@ -135,7 +135,7 @@ def generateBernAsianHornetFeed(ASSETS, CACHE):
             else:
                 weeklyEntry["url"] = f"https://opendata.swiss/{lang}/dataset/asiatische-hornisse"
             weeklyEntry["title"] = translatedBernAsianHornetSightings[lang] + f" {start.isoformat()}-{end.isoformat()}"
-            weeklyEntry["text"] = f"<img src=\"https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernASianHornets-{lang}-{start.isoformat()}-{end.isoformat()}.png\" alt=\"{translatedBernAsianHornetSightings[lang]} {start.isoformat()}-{end.isoformat()}\">" # yes there is an error in filename. the s in asian is capitalized. I don't really want to regenerate all the images...
+            weeklyEntry["text"] = f"<img src=\"https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernAsianHornets-{lang}-{start.isoformat()}-{end.isoformat()}.png\" alt=\"{translatedBernAsianHornetSightings[lang]} {start.isoformat()}-{end.isoformat()}\">" # yes there is an error in filename. the s in asian is capitalized. I don't really want to regenerate all the images...
             feeds[lang].append(copy.deepcopy(weeklyEntry))
 
     generateFeed(
