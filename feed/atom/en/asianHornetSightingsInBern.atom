@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/en/asianHornetSightingsInBern</id>
   <title>Asian Hornet sightings in Bern</title>
-  <updated>2026-06-16T21:59:09.461618+02:00</updated>
+  <updated>2026-06-16T22:03:08.251925+02:00</updated>
   <author>
     <name>ReSSPublica</name>
   </author>
-  <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/en/asianHornetSightingsInBern" rel="self"/>
+  <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/en/asianHornetSightingsInBern.atom" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <subtitle>RSS feed of Asian Hornet sightings in Bern</subtitle>
   <entry>

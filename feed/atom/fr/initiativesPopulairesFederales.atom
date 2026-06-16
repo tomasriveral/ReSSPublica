@@ -6,7 +6,7 @@
   <author>
     <name>ReSSPublica</name>
   </author>
-  <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/initiativesPopulairesFederales" rel="self"/>
+  <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/initiativesPopulairesFederales.atom" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <subtitle>Flux RSS des initiatives populaires fédérales</subtitle>
   <entry>

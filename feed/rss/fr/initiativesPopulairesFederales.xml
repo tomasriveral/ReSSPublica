@@ -2,9 +2,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Initiatives populaires fédérales</title>
-    <link>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/initiativesPopulairesFederales</link>
+    <link>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/initiativesPopulairesFederales.atom</link>
     <description>Flux RSS des initiatives populaires fédérales</description>
-    <atom:link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/initiativesPopulairesFederales" rel="self"/>
+    <atom:link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/initiativesPopulairesFederales.atom" rel="self"/>
     <docs>https://github.com/tomasriveral/ReSSPublica</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>

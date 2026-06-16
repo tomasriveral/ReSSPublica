@@ -2,13 +2,13 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Avvistamenti di calabroni asiatici a Berna</title>
-    <link>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/it/avvistamentiCalabroniAsiaticiBerna</link>
+    <link>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/it/avvistamentiCalabroniAsiaticiBerna.atom</link>
     <description>Feed RSS degli avvistamenti di calabroni asiatici a Berna</description>
-    <atom:link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/it/avvistamentiCalabroniAsiaticiBerna" rel="self"/>
+    <atom:link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/it/avvistamentiCalabroniAsiaticiBerna.atom" rel="self"/>
     <docs>https://github.com/tomasriveral/ReSSPublica</docs>
     <generator>python-feedgen</generator>
     <language>it</language>
-    <lastBuildDate>Tue, 16 Jun 2026 21:59:09 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 22:03:08 +0200</lastBuildDate>
     <item>
       <title>Avvistamenti di calabroni asiatici a Berna 2026-06-08-2026-06-14</title>
       <description>&lt;img src="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernAsianHornets-it-2026-06-08-2026-06-14.png" alt="Avvistamenti di calabroni asiatici a Berna 2026-06-08-2026-06-14"&gt;</description>

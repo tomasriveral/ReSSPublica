@@ -2,13 +2,13 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Observations de frelons asiatiques à Berne</title>
-    <link>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/observationsFrelonsAsiatiquesBerne</link>
+    <link>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/observationsFrelonsAsiatiquesBerne.atom</link>
     <description>Flux RSS des observations de frelons asiatiques à Berne</description>
-    <atom:link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/observationsFrelonsAsiatiquesBerne" rel="self"/>
+    <atom:link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/observationsFrelonsAsiatiquesBerne.atom" rel="self"/>
     <docs>https://github.com/tomasriveral/ReSSPublica</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 16 Jun 2026 21:59:09 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 22:03:08 +0200</lastBuildDate>
     <item>
       <title>Observations de frelons asiatiques à Berne 2026-06-08-2026-06-14</title>
       <description>&lt;img src="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernAsianHornets-fr-2026-06-08-2026-06-14.png" alt="Observations de frelons asiatiques à Berne 2026-06-08-2026-06-14"&gt;</description>

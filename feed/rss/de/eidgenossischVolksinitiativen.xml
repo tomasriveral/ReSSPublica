@@ -2,9 +2,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Eidgenössisch Volksinitiativen</title>
-    <link>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/eidgenossischVolksinitiativen</link>
+    <link>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/eidgenossischVolksinitiativen.atom</link>
     <description>RSS-Feed der föderalen Volksinitiativen</description>
-    <atom:link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/eidgenossischVolksinitiativen" rel="self"/>
+    <atom:link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/eidgenossischVolksinitiativen.atom" rel="self"/>
     <docs>https://github.com/tomasriveral/ReSSPublica</docs>
     <generator>python-feedgen</generator>
     <language>de</language>

@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="it">
   <id>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/it/avvistamentiCalabroniAsiaticiBerna</id>
   <title>Avvistamenti di calabroni asiatici a Berna</title>
-  <updated>2026-06-16T21:59:09.465263+02:00</updated>
+  <updated>2026-06-16T22:03:08.256372+02:00</updated>
   <author>
     <name>ReSSPublica</name>
   </author>
-  <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/it/avvistamentiCalabroniAsiaticiBerna" rel="self"/>
+  <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/it/avvistamentiCalabroniAsiaticiBerna.atom" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <subtitle>Feed RSS degli avvistamenti di calabroni asiatici a Berna</subtitle>
   <entry>
