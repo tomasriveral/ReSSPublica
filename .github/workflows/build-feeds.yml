@@ -12,7 +12,7 @@ on:
         default: "false"
         type: boolean
       forceGenerationBernAsianHornetSightings:
-        description: "Generate even when it's not monday"
+        description: "force feed generation of asian hornets sightings in Bern"
         required: false
         default: "false"
         type: boolean
