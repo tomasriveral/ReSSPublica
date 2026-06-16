@@ -1,12 +1,22 @@
 from feedgen.feed import FeedGenerator
-from datetime import datetime
+from datetime import datetime, date, timedelta
 from dateutil.relativedelta import relativedelta
-from .translations import *
 from zoneinfo import ZoneInfo
+from io import BytesIO
+import pycurl
+
+from .translations import *
+
 import logging
 logger = logging.getLogger("resspublica")
 
 def generateFeed(title, description, fileName, language, standards, lastUpdateTime, entries):
+    # entries must be a dictionary with the following keys:
+    # title, id, date, creationDate, url, source, text (html format)
+    # other keys will be ignored
+
+    # Note : if you want to only show an image, but the html code for an image in text
+
     logger.info(f"Generating feed {title}")
     fg = FeedGenerator()
     fg.title(title)
@@ -70,3 +80,39 @@ def getSignatureInfo(start_date, lang="fr"):
 
 def getValue(row, key):
     return row.get(key, {}).get("value") or None
+
+def fetchUrlToHtml(url: str) -> str:
+    buffer = BytesIO()
+
+    c = pycurl.Curl()
+    c.setopt(c.URL, url)
+    c.setopt(c.WRITEDATA, buffer)
+    c.setopt(c.FOLLOWLOCATION, True)
+    c.setopt(c.TIMEOUT, 20)
+    c.perform()
+    c.close()
+    
+    sleep(1) # avoid making requests too quickly. This shouldn't slow down much as we should try to cache as much possible
+
+    return buffer.getvalue().decode("utf-8", errors="replace")
+
+def weeklyRangesFrom(start_date: date):
+    today = date.today()
+
+    # ISO week start = Monday
+    def week_start(d):
+        return d - timedelta(days=d.weekday())
+
+    current_week_start = week_start(today)
+
+    # align first week start
+    start = week_start(start_date)
+
+    weeks = []
+
+    while start < current_week_start:
+        end = start + timedelta(days=6)
+        weeks.append((start, end))
+        start += timedelta(days=7)
+
+    return weeks

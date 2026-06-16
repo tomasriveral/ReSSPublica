@@ -10,7 +10,18 @@ requires-python = ">=3.10"
 dependencies = [
   "SPARQLWrapper",
   "feedgen",
-  "tinydb"
+  "tinydb",
+  "pandas",
+  "geopandas",
+  "pyarrow",
+  "fiona",
+  "pyproj",
+  "shapely",
+  "numpy",
+  "matplotlib",
+  "pyogrio",
+  "beautifulsoup4",
+  "pycurl"
 ]
 
 [project.scripts]

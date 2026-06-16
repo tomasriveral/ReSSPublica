@@ -23,12 +23,24 @@
         sparqlwrapper
         feedgen
         tinydb
+        pandas
+        geopandas
+        pyarrow
+        fiona
+        pyproj
+        shapely
+        numpy
+        matplotlib
+        pyogrio
+        pycurl
+        beautifulsoup4
       ];
 
       # you will need to point to your local git clone
       postInstall = ''
         wrapProgram $out/bin/resspublica \
-          --set RESSPUBLICA_CACHE "/home/tomasr/devel/ReSSPublica/.cache"
+          --set RESSPUBLICA_CACHE "/home/tomasr/devel/ReSSPublica/.cache" \
+          --set RESSPUBLICA_ASSETS "/home/tomasr/devel/ReSSPublica/assets"
       '';
 
       mainProgram = "resspublica.py";
@@ -36,11 +48,23 @@
     packages.default = self.packages.${system}.resspublica;
     devShells = {
       default = pkgs.mkShell {
-        packages = with pkgs; [
-          python3
-          python314Packages.sparqlwrapper
-          python314Packages.feedgen
-          python314Packages.tinydb
+        packages = with pkgs.python314Packages; [
+          pkgs.python3
+          setuptools
+          sparqlwrapper
+          feedgen
+          tinydb
+          pandas
+          geopandas
+          pyarrow
+          fiona
+          pyproj
+          shapely
+          numpy
+          matplotlib
+          pyogrio
+          beautifulsoup4
+          pycurl
         ];
       };
     };

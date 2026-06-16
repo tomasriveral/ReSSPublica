@@ -69,3 +69,10 @@ translatedSignatureDates = {
     "de": ("<p>Die Unterschriftensammlung begann am", "und endet ungefähr im</p>"),
     "it": ("<p>La raccolta delle firme è iniziata il", "e terminerà circa nel</p>"),
 }
+translatedBernAsianHornetSightings = {
+    "en": ("Asian Hornet sightings in Bern"),
+    "fr": ("Observations de frelons asiatiques à Berne"),
+    "de": ("Sichtungen von Asiatischen Hornissen in Bern"),
+    "it": ("Avvistamenti di calabroni asiatici a Berna"),
+    "rm": ("Observaziuns da vespras asiaticas a Berna"),
+}
