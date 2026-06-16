@@ -25,13 +25,10 @@
         tinydb
         pandas
         geopandas
-        pyarrow
-        fiona
-        pyproj
         shapely
         numpy
+        pyarrow
         matplotlib
-        pyogrio
         pycurl
         beautifulsoup4
       ];
@@ -56,13 +53,10 @@
           tinydb
           pandas
           geopandas
-          pyarrow
-          fiona
-          pyproj
           shapely
           numpy
+          pyarrow
           matplotlib
-          pyogrio
           beautifulsoup4
           pycurl
         ];

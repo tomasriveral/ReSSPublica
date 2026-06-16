@@ -13,13 +13,10 @@ dependencies = [
   "tinydb",
   "pandas",
   "geopandas",
-  "pyarrow",
-  "fiona",
-  "pyproj",
   "shapely",
-  "numpy",
+  "numpy", #dep for panda
+  "pyarrow", #dep for parquet
   "matplotlib",
-  "pyogrio",
   "beautifulsoup4",
   "pycurl"
 ]
