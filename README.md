@@ -9,9 +9,9 @@ We aim to make it more accessible with RSS (and Atom).
 
 ### Feeds
 
-| Title | Description | de | fr | it  |
-|-------|-------------|----|----|-----|
-| Federal initiatives | New federal popular initiatives in the signature stage. | [RSS](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/rss/de/eidgenossischVolksinitiativen.xml) [Atom](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/eidgenossischVolksinitiativen.atom) | [RSS](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/rss/fr/initiativesPopulairesFederales.xml) [Atom](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/initiativesPopulairesFederales.atom) | [RSS](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/rss/it/iniziativePopolariFederali.xml) [Atom](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/it/iniziativePopolariFederali.atom) |
+| Title | Description | Source | de | fr | it  |
+|-------|-------------|--------|----|-----|
+| Federal initiatives | New federal popular initiatives in the signature stage. | [LINDAS](https://cached.lindas.admin.ch/) (See [query](https://github.com/tomasriveral/ReSSPublica/blob/main/resspublica/queries/federalPopularInitiatives.sparql)) | [RSS](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/rss/de/eidgenossischVolksinitiativen.xml) [Atom](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/eidgenossischVolksinitiativen.atom) | [RSS](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/rss/fr/initiativesPopulairesFederales.xml) [Atom](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/initiativesPopulairesFederales.atom) | [RSS](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/rss/it/iniziativePopolariFederali.xml) [Atom](https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/it/iniziativePopolariFederali.atom) |
 
 
 All the is already public. We gather it with the following methods :
