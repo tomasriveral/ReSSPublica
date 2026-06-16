@@ -44,10 +44,13 @@ jobs:
 
       - name: Preparing ENV variables
         run: |
-          echo "RESSPUBLICA_CACHE=$GITHUB_WORKSPACE/.cache" >> $GITHUB_ENV
-          echo "RESSPUBLICA_ASSETS=$GITHUB_WORKSPACE/assets" >> $GITHUB_ENV
-          mkdir -p "$RESSPUBLICA_CACHE"
-          mkdir -p "$RESSPUBLICA_ASSETS"
+          CACHE="$GITHUB_WORKSPACE/.cache"
+          ASSETS="$GITHUB_WORKSPACE/assets"
+          
+          mkdir -p "$CACHE" "$ASSETS"
+          
+          echo "RESSPUBLICA_CACHE=$CACHE" >> $GITHUB_ENV
+          echo "RESSPUBLICA_ASSETS=$ASSETS" >> $GITHUB_ENV
 
       - name: Generate feeds for federal popular initiatives
         run: |
