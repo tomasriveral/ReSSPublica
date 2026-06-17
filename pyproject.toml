@@ -18,7 +18,8 @@ dependencies = [
   "pyarrow", #dep for parquet
   "matplotlib",
   "beautifulsoup4",
-  "pycurl"
+  "pycurl",
+  "seaborn"
 ]
 
 [project.scripts]

@@ -16,6 +16,11 @@ on:
         required: false
         default: "false"
         type: boolean
+      forceGenerationBernPlacesOfWorship:
+        description: "force feed generation of places of worship per religion in Bern"
+        required: false
+        default: "false"
+        type: boolean
 
 jobs:
   build:
@@ -91,6 +96,31 @@ jobs:
             exit 0
           fi
           git commit -m "feeds: asian hornets sighting in Bern update $(date -u +%Y-%m-%d)"
+
+     - name: Generate feeds for places of worship per religion in Bern
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.verbose }}" = "true" ]; then
+            echo "Running in VERBOSE mode"
+            if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.forceGenerationBernPlacesOfWorship }}" = "true" ]; then
+              resspublica --force_gen_bernReligionMap --verbose
+            else
+              resspublica --gen_bernReligionMap --verbose
+            fi
+          else
+            if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.forceGenerationBernPlacesOfWorship }}" = "true" ]; then
+              resspublica --force_gen_bernReligionMap
+            else
+              resspublica --gen_bernReligionMap
+            fi
+          fi
+          git add feed/ .cache/ assets/
+          
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "feeds: places of worship per Religion in Bern update $(date -u +%Y-%m-%d)"
+
 
       - name: Push changes
         run: |

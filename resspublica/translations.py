@@ -76,3 +76,15 @@ translatedBernAsianHornetSightings = {
     "it": ("Avvistamenti di calabroni asiatici a Berna"),
     "rm": ("Observaziuns da vespras asiaticas a Berna"),
 }
+translatedPlacesOfWorshipInBern = {
+    "de": "Gotteshäuser nach Religion im Kanton Bern",
+    "fr": "Lieu de culte par religion dans le canton de Berne"
+}
+translatedPlacesOfWorshipInBernCamelCase = {
+    "de": "gotteshauserNachReligionImKantonBern",
+    "fr": "lieuDeCulteParReligionDansLeCantonDeBerne"   
+}
+translatedCityOfBern = {
+    "de": "Stadt Bern",
+    "fr": "Ville de Bern"
+}

@@ -25,7 +25,9 @@ AI (ChatGPT 5.5 and Deepl) was used in this project for :
 * crafting the SPARQL requests (a language I had never heard of before this project)
 * minor debugging when alternative methods did not solve the problems.
 * German, Italian and Romansh translations.
-* counselling the right python libraries to use
+* help with Python libraries
+
+All code was reviewed by a human.
 
 ## Contributing
 

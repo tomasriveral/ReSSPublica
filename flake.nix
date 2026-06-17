@@ -31,6 +31,7 @@
         matplotlib
         pycurl
         beautifulsoup4
+        seaborn
       ];
 
       # you will need to point to your local git clone
@@ -59,6 +60,7 @@
           matplotlib
           beautifulsoup4
           pycurl
+          seaborn
         ];
       };
     };

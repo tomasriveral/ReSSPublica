@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+  <id>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/lieuDeCulteParReligionDansLeCantonDeBerne</id>
+  <title>Lieu de culte par religion dans le canton de Berne</title>
+  <updated>2026-06-17T21:51:13.497469+02:00</updated>
+  <author>
+    <name>ReSSPublica</name>
+  </author>
+  <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/lieuDeCulteParReligionDansLeCantonDeBerne.atom" rel="self"/>
+  <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
+  <subtitle>Flux RSS des Lieu de culte par religion dans le canton de Berne</subtitle>
+</feed>

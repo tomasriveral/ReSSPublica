@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Gotteshäuser nach Religion im Kanton Bern</title>
+    <link>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/gotteshauserNachReligionImKantonBern.atom</link>
+    <description>RSS-Feed der Gotteshäuser nach Religion im Kanton Bern</description>
+    <atom:link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/gotteshauserNachReligionImKantonBern.atom" rel="self"/>
+    <docs>https://github.com/tomasriveral/ReSSPublica</docs>
+    <generator>python-feedgen</generator>
+    <language>de</language>
+    <lastBuildDate>Wed, 17 Jun 2026 21:51:13 +0200</lastBuildDate>
+  </channel>
+</rss>

@@ -135,7 +135,7 @@ def generateBernAsianHornetFeed(ASSETS, CACHE):
             else:
                 weeklyEntry["url"] = f"https://opendata.swiss/{lang}/dataset/asiatische-hornisse"
             weeklyEntry["title"] = translatedBernAsianHornetSightings[lang] + f" {start.isoformat()}-{end.isoformat()}"
-            weeklyEntry["text"] = f"<img src=\"https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernAsianHornets-{lang}-{start.isoformat()}-{end.isoformat()}.png\" alt=\"{translatedBernAsianHornetSightings[lang]} {start.isoformat()}-{end.isoformat()}\">" # yes there is an error in filename. the s in asian is capitalized. I don't really want to regenerate all the images...
+            weeklyEntry["text"] = f"<img src=\"https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernAsianHornets-{lang}-{start.isoformat()}-{end.isoformat()}.png\" alt=\"{translatedBernAsianHornetSightings[lang]} {start.isoformat()}-{end.isoformat()}\">"
             feeds[lang].append(copy.deepcopy(weeklyEntry))
 
     generateFeed(
