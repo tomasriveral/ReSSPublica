@@ -97,7 +97,7 @@ jobs:
           fi
           git commit -m "feeds: asian hornets sighting in Bern update $(date -u +%Y-%m-%d)"
 
-     - name: Generate feeds for places of worship per religion in Bern
+      - name: Generate feeds for places of worship per religion in Bern
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.verbose }}" = "true" ]; then
             echo "Running in VERBOSE mode"
