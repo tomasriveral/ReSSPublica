@@ -21,6 +21,11 @@ on:
         required: false
         default: "false"
         type: boolean
+      ignoreFederalPopularInitiativesFeed:
+        description: "skip federal initiatives feed generation"
+        required: false
+        default: "false"
+        type: boolean
 
 jobs:
   build:
@@ -59,20 +64,21 @@ jobs:
 
       - name: Generate feeds for federal popular initiatives
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.verbose }}" = "true" ]; then
-            echo "Running in VERBOSE mode"
-            resspublica --verbose --gen_federalInitiatives
-          else
-            resspublica --gen_federalInitiatives
+          if ! [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.ignoreFederalPopularInitiativesFeed }}" = "true"]; then
+            if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.verbose }}" = "true" ]; then
+              echo "Running in VERBOSE mode"
+              resspublica --verbose --gen_federalInitiatives
+            else
+              resspublica --gen_federalInitiatives
+            fi
+            git add feed/ .cache/
+            
+            if git diff --cached --quiet; then
+              echo "No changes to commit"
+              exit 0
+            fi
+            git commit -m "feeds: federal popular initiatives update $(date -u +%Y-%m-%d)"
           fi
-          git add feed/ .cache/
-          
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          git commit -m "feeds: federal popular initiatives update $(date -u +%Y-%m-%d)"
-
       - name: Generate feeds for asian hornets sighting in Bern
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.verbose }}" = "true" ]; then
