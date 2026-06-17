@@ -63,12 +63,12 @@ translatedMonths = {
     "it": ["gennaio","febbraio","marzo","aprile","maggio","giugno",
            "luglio","agosto","settembre","ottobre","novembre","dicembre"]
 }
-
 translatedSignatureDates = {
     "fr": ("<p>La collecte des signatures a commencé le", "et se terminera vers</p>"),
     "de": ("<p>Die Unterschriftensammlung begann am", "und endet ungefähr im</p>"),
     "it": ("<p>La raccolta delle firme è iniziata il", "e terminerà circa nel</p>"),
 }
+# used in bernAsianHornet.py
 translatedBernAsianHornetSightings = {
     "en": ("Asian Hornet sightings in Bern"),
     "fr": ("Observations de frelons asiatiques à Berne"),
@@ -76,6 +76,7 @@ translatedBernAsianHornetSightings = {
     "it": ("Avvistamenti di calabroni asiatici a Berna"),
     "rm": ("Observaziuns da vespras asiaticas a Berna"),
 }
+# used in bernReligionMap.py
 translatedPlacesOfWorshipInBern = {
     "de": "Gotteshäuser nach Religion im Kanton Bern",
     "fr": "Lieu de culte par religion dans le canton de Berne"
