@@ -252,7 +252,7 @@ def generateBernReligionMap(ASSETS, CACHE):
             trimestrialEntry["url"] = f"https://opendata.swiss/{lang}/dataset/religionslandkarte"
             trimestrialEntry["title"] = f"{translatedPlacesOfWorshipInBern[lang]}-{start.isoformat()}"
             trimestrialEntry["text"] = f"<img src=\"https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernReligionMap-{lang}-{start.isoformat()}-{end.isoformat()}.png\" alt=\"{translatedPlacesOfWorshipInBern[lang]} {start.isoformat()}\">"
-            feeds[lang].append(copy.deepcopy(weeklyEntry))
+            feeds[lang].append(copy.deepcopy(trimestrialEntry))
     generateFeed(
         translatedPlacesOfWorshipInBern["fr"],
         f"Flux RSS des {translatedPlacesOfWorshipInBern["fr"]}",
