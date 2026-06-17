@@ -2,11 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
   <id>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/gotteshauserNachReligionImKantonBern</id>
   <title>Gotteshäuser nach Religion im Kanton Bern</title>
-  <updated>2026-06-17T21:51:13.499795+02:00</updated>
+  <updated>2026-06-17T20:07:47.207299+02:00</updated>
   <author>
     <name>ReSSPublica</name>
   </author>
   <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/gotteshauserNachReligionImKantonBern.atom" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <subtitle>RSS-Feed der Gotteshäuser nach Religion im Kanton Bern</subtitle>
+  <entry>
+    <id>initiative-1767268800.0</id>
+    <title>Gotteshäuser nach Religion im Kanton Bern-2026-01-01</title>
+    <updated>2026-01-01T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernReligionMap-de-2026-01-01-2026-04-30.png" alt="Gotteshäuser nach Religion im Kanton Bern 2026-01-01"&gt;</content>
+    <published>2026-01-01T00:00:00+01:00</published>
+  </entry>
 </feed>
