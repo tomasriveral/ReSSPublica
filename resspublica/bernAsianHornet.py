@@ -47,7 +47,9 @@ def generateBernAsianHornetFeed(ASSETS, CACHE):
     ASIAN_HORNETS_DB_PATH = CACHE / "bernAsianHornet.json"
     global db
     global q
-    db = TinyDB(ASIAN_HORNETS_DB_PATH)
+    db = TinyDB(ASIAN_HORNETS_DB_PATH) # this database contains two types of elements :
+    # 1. date of observation { "id": NUMBER, "date": "yyyy-mm-dd"}
+    # 2. count per date { "span": "yyyy-mm-dd-yyyy-mm-dd", "count": NUMBER }
     q = Query()
 
 
@@ -66,6 +68,15 @@ def generateBernAsianHornetFeed(ASSETS, CACHE):
     df = df.dropna(subset=["geometry"])
 
     gdf = gpd.GeoDataFrame(df, geometry="geometry", crs="EPSG:2056")
+    
+    # Counts how many observations per week. we keep that in the same database as before
+    for start, end in weeklyRangesFrom(arbitraryStartDate):
+        if not db.contains(q.weeklyDate == start.isoformat()):
+            count = 0
+            for observations in gdf.itertuples():
+                if start < extract_announcement_date(observations[1], observations[8]) < end:
+                    count += 1
+            db.upsert({"weeklyDate": start.isoformat(), "count": count}, q.weeklyDate == start.isoformat())
 
     # We create a weekly image
     # We just need to check if we haven't already created it
@@ -136,6 +147,7 @@ def generateBernAsianHornetFeed(ASSETS, CACHE):
                 weeklyEntry["url"] = f"https://opendata.swiss/{lang}/dataset/asiatische-hornisse"
             weeklyEntry["title"] = translatedBernAsianHornetSightings[lang] + f" {start.isoformat()}-{end.isoformat()}"
             weeklyEntry["text"] = f"<img src=\"https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernAsianHornets-{lang}-{start.isoformat()}-{end.isoformat()}.png\" alt=\"{translatedBernAsianHornetSightings[lang]} {start.isoformat()}-{end.isoformat()}\">"
+            weeklyEntry["text"] += f"{db.get(q.weeklyDate == start.isoformat())["count"]} {translatedObservations[lang]}"
             feeds[lang].append(copy.deepcopy(weeklyEntry))
 
     generateFeed(
