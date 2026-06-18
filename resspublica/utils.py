@@ -118,34 +118,33 @@ def weeklyRangesFrom(start_date: date):
 
     return weeks
 
-
 def trimester_start(d: date) -> date:
-    if d.month <= 4:
-        return date(d.year, 1, 1)
-    elif d.month <= 8:
-        return date(d.year, 5, 1)
-    else:
-        return date(d.year, 9, 1)
+    trimester_index = (d.month - 1) // 3
+    start_month = trimester_index * 3 + 1
+    return date(d.year, start_month, 1)
+
+
 def next_trimester_start(d: date) -> date:
-    if d.month <= 4:
-        return date(d.year, 5, 1)
-    elif d.month <= 8:
-        return date(d.year, 9, 1)
-    else:
-        return date(d.year + 1, 1, 1)
-def trimesterRangesFrom(start_date: date):
-    today = date.today()
+    start = trimester_start(d)
+    month = start.month + 3
 
-    current_trimester_start = trimester_start(today)
+    if month > 12:
+        return date(start.year + 1, 1, 1)
+
+    return date(start.year, month, 1)
+
+
+def trimesterRangesFrom(start_date: date, as_of: date | None = None):
+    today = as_of or date.today()
+
     start = trimester_start(start_date)
+    current_start = trimester_start(today)
 
-    trimesters = []
+    ranges = []
 
-    while start < current_trimester_start:
-        next_start = next_trimester_start(start)
-        end = next_start - timedelta(days=1)
+    while start < current_start:
+        nxt = next_trimester_start(start)
+        ranges.append((start, nxt - timedelta(days=1)))
+        start = nxt
 
-        trimesters.append((start, end))
-        start = next_start
-
-    return trimesters
+    return ranges

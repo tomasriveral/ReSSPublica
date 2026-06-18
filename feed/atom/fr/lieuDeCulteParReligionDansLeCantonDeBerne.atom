@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
   <id>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/lieuDeCulteParReligionDansLeCantonDeBerne</id>
   <title>Lieu de culte par religion dans le canton de Berne</title>
-  <updated>2026-06-18T18:06:22.012315+02:00</updated>
+  <updated>2026-06-18T19:55:34.426083+02:00</updated>
   <author>
     <name>ReSSPublica</name>
   </author>
@@ -13,7 +13,7 @@
     <id>1767265200.0</id>
     <title>Lieu de culte par religion dans le canton de Berne-2026-01-01</title>
     <updated>2026-01-01T00:00:00+01:00</updated>
-    <content type="html">&lt;img src="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernReligionMap-fr-2026-01-01-2026-04-30.png" alt="Lieu de culte par religion dans le canton de Berne 2026-01-01"&gt;réformé évangélique  (Christianisme): 270&lt;br&gt;luthérien (Christianisme): 2&lt;br&gt;anglican (Christianisme): 1&lt;br&gt;évangélique, église de la migration (Christianisme): 11&lt;br&gt;catholique romain (Christianisme): 73&lt;br&gt;catholique chrétien (Christianisme): 4&lt;br&gt;orthodoxe (Christianisme): 4&lt;br&gt;orthodoxe oriental (Christianisme): 3&lt;br&gt;église libre (Christianisme): 186&lt;br&gt;mennonite (Christianisme): 10&lt;br&gt;autre (Christianisme): 26&lt;br&gt;sunnite (Islam): 16&lt;br&gt;chiite (Islam): 1&lt;br&gt;autre (Islam): 2&lt;br&gt;theravada (Bouddhisme ): 3&lt;br&gt;mahayana (Bouddhisme ): 9&lt;br&gt;vajrayana (Bouddhisme ): 7&lt;br&gt;autre (Bouddhisme ): 3&lt;br&gt;Hindouisme: 8&lt;br&gt;Judaïsme: 2&lt;br&gt;Alévisme: 2&lt;br&gt;Sikhisme: 1&lt;br&gt;Bahaïsme: 2&lt;br&gt;Autre tradition: 2&lt;br&gt;</content>
+    <content type="html">&lt;img src="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernReligionMap-fr-2026-01-01-2026-03-31.png" alt="Lieu de culte par religion dans le canton de Berne 2026-01-01"&gt;réformé évangélique  (Christianisme): 270&lt;br&gt;luthérien (Christianisme): 2&lt;br&gt;anglican (Christianisme): 1&lt;br&gt;évangélique, église de la migration (Christianisme): 11&lt;br&gt;catholique romain (Christianisme): 73&lt;br&gt;catholique chrétien (Christianisme): 4&lt;br&gt;orthodoxe (Christianisme): 4&lt;br&gt;orthodoxe oriental (Christianisme): 3&lt;br&gt;église libre (Christianisme): 186&lt;br&gt;mennonite (Christianisme): 10&lt;br&gt;autre (Christianisme): 26&lt;br&gt;sunnite (Islam): 16&lt;br&gt;chiite (Islam): 1&lt;br&gt;autre (Islam): 2&lt;br&gt;theravada (Bouddhisme ): 3&lt;br&gt;mahayana (Bouddhisme ): 9&lt;br&gt;vajrayana (Bouddhisme ): 7&lt;br&gt;autre (Bouddhisme ): 3&lt;br&gt;Hindouisme: 8&lt;br&gt;Judaïsme: 2&lt;br&gt;Alévisme: 2&lt;br&gt;Sikhisme: 1&lt;br&gt;Bahaïsme: 2&lt;br&gt;Autre tradition: 2&lt;br&gt;</content>
     <published>2026-01-01T00:00:00+01:00</published>
   </entry>
 </feed>

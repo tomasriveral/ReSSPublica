@@ -70,11 +70,18 @@ translatedSignatureDates = {
 }
 # used in bernAsianHornet.py
 translatedBernAsianHornetSightings = {
-    "en": ("Asian Hornet sightings in Bern"),
-    "fr": ("Observations de frelons asiatiques à Berne"),
-    "de": ("Sichtungen von Asiatischen Hornissen in Bern"),
-    "it": ("Avvistamenti di calabroni asiatici a Berna"),
-    "rm": ("Observaziuns da vespras asiaticas a Berna"),
+    "en": "Asian Hornet sightings in Bern",
+    "fr": "Observations de frelons asiatiques à Berne",
+    "de": "Sichtungen von Asiatischen Hornissen in Bern",
+    "it": "Avvistamenti di calabroni asiatici a Berna",
+    "rm": "Observaziuns da vespras asiaticas a Berna",
+}
+translatedObservations = {
+    "en": "sightings",
+    "fr": "observations",
+    "de": "Sichtungen",
+    "it": "avvistamenti",
+    "rm": "Observaziuns"
 }
 # used in bernReligionMap.py
 translatedPlacesOfWorshipInBern = {
