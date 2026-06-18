@@ -1,5 +1,3 @@
-Project curently in devellopment.
-
 ### Why
 
 The Swiss governement publishes daily lots of information scattered on the internet (newsletters, sparql endpoints, RTS/SSR/RSI, APIs, ...).
