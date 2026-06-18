@@ -163,7 +163,7 @@ def generateFederalFeed(CACHE):
                 item["text"] += translatedEndDateAndInsufficientSignatures[lang]
             
             elif item["collectedSignature"] == None:
-                item["text"] += getSignatureInfo(item["creationDate"], lang)
+                pass # we already put the text before. We just need to keep this elif condition to not raise the following ValueError
             
             else:
                 raise ValueError(

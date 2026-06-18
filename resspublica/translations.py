@@ -64,9 +64,9 @@ translatedMonths = {
            "luglio","agosto","settembre","ottobre","novembre","dicembre"]
 }
 translatedSignatureDates = {
-    "fr": ("<p>La collecte des signatures a commencé le", "et se terminera vers</p>"),
-    "de": ("<p>Die Unterschriftensammlung begann am", "und endet ungefähr im</p>"),
-    "it": ("<p>La raccolta delle firme è iniziata il", "e terminerà circa nel</p>"),
+    "fr": ("<p>La collecte des signatures a commencé le", "et se terminera en"),
+    "de": ("<p>Die Unterschriftensammlung begann am", "und endet im"),
+    "it": ("<p>La raccolta delle firme è iniziata il", "e terminerà nel"),
 }
 # used in bernAsianHornet.py
 translatedBernAsianHornetSightings = {
