@@ -28,12 +28,6 @@ def generateBernReligionMap(ASSETS, CACHE):
 
     logger.info("Generating Religion map in Bern feed...")
     logger.info("Preparing data...")
-    #ASIAN_HORNETS_DB_PATH = CACHE / "bernAsianHornet.json"
-    #global db
-    #global q
-    #db = TinyDB(ASIAN_HORNETS_DB_PATH)
-    #q = Query()
-
 
     # 1. Load data
     url = "https://geofiles.be.ch/geoportal/pub/download/RELIGION/religion_relstaet.parquet"
@@ -100,6 +94,40 @@ def generateBernReligionMap(ASSETS, CACHE):
         .to_dict()
     )
     logger.debug(religions)
+
+    # we generate the count by each religion and store it in a database to log changes.
+
+    BERN_RELIGION_MAP_DB_PATH = CACHE / "bernReligionMapByReligionCount.json"
+
+    db = TinyDB(BERN_RELIGION_MAP_DB_PATH)
+    q = Query()
+
+
+    for start, end in trimesterRangesFrom(arbitraryStartDate):
+        if db.contains(q.date == start.isoformat()):
+            continue # we already calculated the entry for this date. We skip it.
+        dbEntry = {
+            "date": start.isoformat(),
+            "religionCount": {}
+        }
+        # initialize with default values
+        for religionID in religions.keys():
+            dbEntry["religionCount"][str(religionID)] = 0
+        # count
+        for placeOfWorship in religionGeoDataFrame.itertuples():
+            # again we must check against religions that don't have nkenn information
+            try:
+                placeOfWorship.nkenn_id
+                dbEntry["religionCount"][f"{placeOfWorship.reltra_id}-{str(placeOfWorship.nkenn_id).split(".")[0]}"] += 1
+            except:
+                dbEntry["religionCount"][f"{placeOfWorship.reltra_id}-0"] += 1
+        logger.info("Religion Count")
+        logger.info(dbEntry["religionCount"])
+        
+        db.upsert(dbEntry, q.date == start.isoformat())
+
+
+    # we generate the map(s) now
 
     # generate color palette (1 color by religion with similar religion similar color)
     palette = color_palette("husl", len(religions.keys()))
@@ -248,10 +276,19 @@ def generateBernReligionMap(ASSETS, CACHE):
         trimestrialEntry["date"] = start.isoformat() # there is no point have them different. On other feeds it's used for update date
         trimestrialEntry["source"] = "opendata.swiss"
 
+        countDataBase = db.get(q.date == start.isoformat())["religionCount"]
+
         for lang in ["fr", "de"]:
             trimestrialEntry["url"] = f"https://opendata.swiss/{lang}/dataset/religionslandkarte"
             trimestrialEntry["title"] = f"{translatedPlacesOfWorshipInBern[lang]}-{start.isoformat()}"
             trimestrialEntry["text"] = f"<img src=\"https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernReligionMap-{lang}-{start.isoformat()}-{end.isoformat()}.png\" alt=\"{translatedPlacesOfWorshipInBern[lang]} {start.isoformat()}\">"
+
+            for religionID in religions.keys():
+
+                if religionID[2] == "0": # that means there is no nkenn
+                    trimestrialEntry["text"] += f"{religions[religionID][f"reltrat_reltra_{lang}"]}: {countDataBase[religionID]}<br>"
+                else:
+                    trimestrialEntry["text"] += f"{religions[religionID][f"nkennt_nkenn_{lang}"]} ({religions[religionID][f"reltrat_reltra_{lang}"]}): {countDataBase[religionID]}<br>"
             feeds[lang].append(copy.deepcopy(trimestrialEntry))
     generateFeed(
         translatedPlacesOfWorshipInBern["fr"],
