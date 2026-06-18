@@ -37,7 +37,7 @@ def generateFeed(title, description, fileName, language, standards, lastUpdateTi
     for item in entries:
         fe = fg.add_entry()
         fe.title(item["title"])
-        fe.guid(f"initiative-{item['id']}", permalink=False)
+        fe.guid(str(item['id']), permalink=False)
         if not isinstance(item["date"], datetime):
             item["date"] = datetime.fromisoformat(item["date"]).replace(tzinfo=ZoneInfo("Europe/Zurich"))
         fe.updated(item["date"])
