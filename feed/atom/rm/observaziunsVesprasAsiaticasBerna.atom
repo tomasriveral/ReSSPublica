@@ -2,13 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="rm">
   <id>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/rm/observaziunsVesprasAsiaticasBerna</id>
   <title>Observaziuns da vespras asiaticas a Berna</title>
-  <updated>2026-06-22T11:43:52.778433+02:00</updated>
+  <updated>2026-06-29T10:32:00.504231+02:00</updated>
   <author>
     <name>ReSSPublica</name>
   </author>
   <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/rm/observaziunsVesprasAsiaticasBerna.atom" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <subtitle>Feed RSS da las observaziuns da vespras asiaticas a Berna</subtitle>
+  <entry>
+    <id>1782129600.0</id>
+    <title>Observaziuns da vespras asiaticas a Berna 2026-06-22-2026-06-28</title>
+    <updated>2026-06-28T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernAsianHornets-rm-2026-06-22-2026-06-28.png" alt="Observaziuns da vespras asiaticas a Berna 2026-06-22-2026-06-28"&gt;0 Observaziuns</content>
+    <published>2026-06-28T00:00:00+02:00</published>
+  </entry>
   <entry>
     <id>1781524800.0</id>
     <title>Observaziuns da vespras asiaticas a Berna 2026-06-15-2026-06-21</title>
