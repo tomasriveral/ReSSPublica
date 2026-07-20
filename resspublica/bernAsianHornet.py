@@ -95,7 +95,7 @@ def generateBernAsianHornetFeed(ASSETS, CACHE):
         for observations in gdf.itertuples():
             # each observation is a tuple similar to 
             #Pandas(Index=0, objectid=6178, meldjahr=2026, anzsichd=nan, anzsichy=1, urlinf_de='https://www.inforama.ch/images/global/beratung/PflanzenbauTierhaltung/Bienen/Asiatische-Hornisse/Sichtungen-von-Asiatischen-Hornissen.pdf', urlinf_fr='https://www.inforama.ch/images/global/beratung/PflanzenbauTierhaltung/Bienen/Asiatische-Hornisse/Observations-de-frelons-asiatiques.pdf', urlah_de='https://geofiles.be.ch/geoportal/pub/zusatzdaten/ASHORNIS/ASHORNIS_22_25_DE.html', urlah_fr='https://geofiles.be.ch/geoportal/pub/zusatzdaten/ASHORNIS/ASHORNIS_22_25_FR.html', katanzsid=0, katanzsiy=1, geometry=<POLYGON ((2594000 1180000, 2594000 1182000, 2596000 1182000, 2596000 118000...>, bbox={'min_x': 2594000.0, 'min_y': 1180000.0, 'max_x': 2596000.0, 'max_y': 1182000.0})
-
+            logger.debug(observations)
             if start < extract_announcement_date(observations[1],observations[8]) < end:
                 weeklySubsetIdList.append(observations[1])
             else:
