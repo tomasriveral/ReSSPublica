@@ -28,6 +28,9 @@ def extract_announcement_date(observationId, observationUrl):
         return date.fromisoformat(db.get(q.id == observationId)["date"])
     else:
         logger.debug(f"observation {str(observationId)} is a new observation.")
+        if observationUrl == "-":
+            # for some reason some observations have "-" as the url
+            return date.today()
         html = fetchUrlToHtml(observationUrl)
         soup = BeautifulSoup(html, "html.parser")
     
