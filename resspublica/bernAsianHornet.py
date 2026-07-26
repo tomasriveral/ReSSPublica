@@ -149,7 +149,7 @@ def generateBernAsianHornetFeed(ASSETS, CACHE):
             else:
                 weeklyEntry["url"] = f"https://opendata.swiss/{lang}/dataset/asiatische-hornisse"
             weeklyEntry["title"] = translatedBernAsianHornetSightings[lang] + f" {start.isoformat()}-{end.isoformat()}"
-            weeklyEntry["text"] = f"<img src=\"https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernAsianHornets-{lang}-{start.isoformat()}-{end.isoformat()}.png\" alt=\"{translatedBernAsianHornetSightings[lang]} {start.isoformat()}-{end.isoformat()}\">"
+            weeklyEntry["text"] = f"<img src=\"https://resspublica.tomasrivera.ch/images/bernAsianHornets-{lang}-{start.isoformat()}-{end.isoformat()}.png\" alt=\"{translatedBernAsianHornetSightings[lang]} {start.isoformat()}-{end.isoformat()}\">"
             weeklyEntry["text"] += f"{db.get(q.weeklyDate == start.isoformat())["count"]} {translatedObservations[lang]}"
             feeds[lang].append(copy.deepcopy(weeklyEntry))
 

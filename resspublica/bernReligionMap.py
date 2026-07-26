@@ -281,7 +281,7 @@ def generateBernReligionMap(ASSETS, CACHE):
         for lang in ["fr", "de"]:
             trimestrialEntry["url"] = f"https://opendata.swiss/{lang}/dataset/religionslandkarte"
             trimestrialEntry["title"] = f"{translatedPlacesOfWorshipInBern[lang]}-{start.isoformat()}"
-            trimestrialEntry["text"] = f"<img src=\"https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/.cache/bernReligionMap-{lang}-{start.isoformat()}-{end.isoformat()}.png\" alt=\"{translatedPlacesOfWorshipInBern[lang]} {start.isoformat()}\">"
+            trimestrialEntry["text"] = f"<img src=\"https://resspublica.tomasrivera.ch/images/bernReligionMap-{lang}-{start.isoformat()}-{end.isoformat()}.png\" alt=\"{translatedPlacesOfWorshipInBern[lang]} {start.isoformat()}\">"
 
             for religionID in religions.keys():
 
