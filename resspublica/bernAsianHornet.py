@@ -138,7 +138,7 @@ def generateBernAsianHornetFeed(ASSETS, CACHE):
     for start, end in weeklyRangesFrom(arbitraryStartDate): # arbitrary start date
         weeklyEntry = {}
 
-        weeklyEntry["id"] = datetime.combine(start, time(12, 0)).timestamp() # we use epoch time as the id
+        weeklyEntry["id"] = f"asian-hornets-bern-{start.isoformat()}-{end.isoformat()}" # we use epoch time as the id EDIT: NO THIS BROKE MULTIPLE TIMES MAKING SOME ID CHANGES. WE CHANGE THAT
         weeklyEntry["creationDate"] = end.isoformat()
         weeklyEntry["date"] = end.isoformat() # there is no point of updating it later, as (I think) data isn't retroactively put
         weeklyEntry["source"] = "opendata.swiss"

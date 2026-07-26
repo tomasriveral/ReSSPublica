@@ -271,7 +271,7 @@ def generateBernReligionMap(ASSETS, CACHE):
     }
     for start, end in trimesterRangesFrom(arbitraryStartDate):
         trimestrialEntry = {}
-        trimestrialEntry["id"] = datetime.combine(start, time(12, 0)).timestamp() # we use timestamp as ids
+        trimestrialEntry["id"] = f"religion-map-bern-{start.isoformat()}-{end.isoformat()}" # timestamps from epoch are unreliable
         trimestrialEntry["creationDate"] = start.isoformat()
         trimestrialEntry["date"] = start.isoformat() # there is no point have them different. On other feeds it's used for update date
         trimestrialEntry["source"] = "opendata.swiss"
