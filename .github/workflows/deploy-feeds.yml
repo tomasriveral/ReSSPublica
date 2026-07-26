@@ -30,6 +30,7 @@ jobs:
       - name: Deploy feeds
         run: |
           rsync -avz --delete \
+            -e "ssh -i ~/.ssh/id_ed25519" \
             --include='*/' \
             --include='*.xml' \
             --include='*.atom' \
@@ -40,6 +41,7 @@ jobs:
       - name: Deploy images
         run: |
           rsync -avz --delete \
+            -e "ssh -i ~/.ssh/id_ed25519" \
             --include='*/' \
             --include='*.png' \
             --include='*.jpeg' \
