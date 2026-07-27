@@ -2,13 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
   <id>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/observationsFrelonsAsiatiquesBerne</id>
   <title>Observations de frelons asiatiques à Berne</title>
-  <updated>2026-07-26T16:16:00.326668+02:00</updated>
+  <updated>2026-07-27T09:41:30.100009+02:00</updated>
   <author>
     <name>ReSSPublica</name>
   </author>
   <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/observationsFrelonsAsiatiquesBerne.atom" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <subtitle>Flux RSS des observations de frelons asiatiques à Berne</subtitle>
+  <entry>
+    <id>asian-hornets-bern-2026-07-20-2026-07-26</id>
+    <title>Observations de frelons asiatiques à Berne 2026-07-20-2026-07-26</title>
+    <updated>2026-07-26T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/bernAsianHornets-fr-2026-07-20-2026-07-26.png" alt="Observations de frelons asiatiques à Berne 2026-07-20-2026-07-26"&gt;5 observations</content>
+    <published>2026-07-26T00:00:00+02:00</published>
+  </entry>
   <entry>
     <id>asian-hornets-bern-2026-07-13-2026-07-19</id>
     <title>Observations de frelons asiatiques à Berne 2026-07-13-2026-07-19</title>
