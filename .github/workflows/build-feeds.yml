@@ -127,6 +127,23 @@ jobs:
           fi
           git commit -m "feeds: places of worship per Religion in Bern update $(date -u +%Y-%m-%d)"
 
+      - name: Generate feeds for air quality in Basel
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.verbose }}" = "true" ]; then
+            echo "Running in VERBOSE mode"
+              resspublica --gen_baselLuftqualitat --verbose
+            fi
+          else
+            resspublica --gen_baselLuftqualitat
+          fi
+          git add feed/ .cache/ assets/
+          
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "feeds: air quality in Basel update $(date -u +%Y-%m-%d)"
+
 
       - name: Push changes
         run: |
