@@ -96,3 +96,18 @@ translatedCityOfBern = {
     "de": "Stadt Bern",
     "fr": "Ville de Bern"
 }
+
+translatedAirQualityInBasel = {
+    "fr": "Qualité de l'air à Bâle",
+    "en": "Air quality in Basel",
+    "de": "Luftqualität in Basel",
+    "it": "Qualità dell'aria a Basilea",
+    "rm": "Qualitad da l'aria a Basilea"
+}
+translatedAirQualityInBaselCamelCase = {
+    "fr": "qualiteDeLAirABale",
+    "en": "airQualityInBasel",
+    "de": "luftqualitatInBasel",
+    "it": "qualitaDell'AriaABasilea",
+    "rm": "qualitadDaLAriaABasilea"
+}
