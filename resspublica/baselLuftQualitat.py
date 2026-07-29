@@ -12,33 +12,33 @@ logger = logging.getLogger("resspublica")
 from .translations import *
 from .utils import *
 
-start_date = pd.Timestamp("2026-01-01")
-start_date_datetime = date.fromisoformat("2026-01-01") # a bit dumb we need those two formats
-end_date = pd.Timestamp((date.today() - timedelta(days=1)).isoformat())
+startDate = pd.Timestamp("2026-01-01")
+startDateDatetimeFormat = date.fromisoformat("2026-01-01") # a bit dumb we need those two formats
+endDate = pd.Timestamp((date.today() - timedelta(days=1)).isoformat())
  
 
-station_information = {
-"100048": {
-    "name": "Basel Chrischona",
-    "coordinates": (47.571709338, 7.687073826)
-},
-"100050": {
-    "name": "Basel Feldbergstrasse",
-    "coordinates": (47.567022213, 7.594722533)
-},
-"100049": {
-    "name": "Basel St. Johannplatz",
-    "coordinates": (47.565950312, 7.582002453)
-},
-
-"12450": {
-    "name": "Sissach-Bützenen",
-    "coordinates": (47.465037653, 7.815429278)
-},
-"12510": {
-    "name": "A2 Hard",
-    "coordinates": (47.538075849, 7.648985359)
-},
+stationInformation = {
+    "100048": {
+        "name": "Basel Chrischona",
+        "coordinates": (47.571709338, 7.687073826)
+    },
+    "100050": {
+        "name": "Basel Feldbergstrasse",
+        "coordinates": (47.567022213, 7.594722533)
+    },
+    "100049": {
+        "name": "Basel St. Johannplatz",
+        "coordinates": (47.565950312, 7.582002453)
+    },
+    
+    "12450": {
+        "name": "Sissach-Bützenen",
+        "coordinates": (47.465037653, 7.815429278)
+    },
+    "12510": {
+        "name": "A2 Hard",
+        "coordinates": (47.538075849, 7.648985359)
+    },
 }
 
 pollutants = [
@@ -48,7 +48,7 @@ pollutants = [
     "o3"
 ]
 
-pollutant_units = {
+pollutantUnits = {
 "pm10": "µg/m³",
 "pm2_5": "µg/m³",
 "no2": "µg/m³",
@@ -57,7 +57,7 @@ pollutant_units = {
 
 
 # Fixed scale per pollutant so colors remain comparable day-to-day
-pollutant_scales = {
+pollutantScales = {
 "pm10": (0, 50),
 "pm2_5": (0, 30),
 "no2": (0, 100),
@@ -76,30 +76,24 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
         "https://data.bl.ch/api/v2/catalog/datasets/12510/exports/parquet"
     ]
     
-    # ---------------------------------------------------------
-    # Load data
-    # ---------------------------------------------------------
     dataframes = []
     
     for url in urls:
         logger.debug(f"Querying {url}...")
         df = pd.read_parquet(url)
     
-        station_id = url.split("/")[-3]
+        stationId = url.split("/")[-3]
     
-        df["station_id"] = station_id
+        df["stationId"] = stationId
         
         # Always define station name
         # Use dataset id as fallback until manually mapped
-        df["station_name"] = station_id
+        df["stationName"] = stationId
         
-        if station_id in station_information:
-            df["station_name"] = station_information[station_id]["name"]
+        if stationId in stationInformation:
+            df["stationName"] = stationInformation[stationId]["name"]
     
-        # -----------------------------------------------------
-        # Normalize datetime to Swiss time
-        # -----------------------------------------------------
-        possible_dates = [
+        possibleVariableNameForDates = [
             "datum_zeit",
             "timestamp",
             "anfangszeit",
@@ -109,7 +103,7 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
         date_column = next(
             (
                 col
-                for col in possible_dates
+                for col in possibleVariableNameForDates
                 if col in df.columns
             ),
             None
@@ -134,23 +128,17 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
         )
     
     
-        # -----------------------------------------------------
-        # Add coordinates for BL datasets
-        # -----------------------------------------------------
-        if station_id in station_information:
+        if stationId in stationInformation:
         
-            lat, lon = station_information[station_id]["coordinates"]
+            lat, lon = stationInformation[stationId]["coordinates"]
         
             df["latitude"] = lat
             df["longitude"] = lon
         
-            df["station_name"] = (
-                station_information[station_id]["name"]
+            df["stationName"] = (
+                stationInformation[stationId]["name"]
             )
     
-        # -----------------------------------------------------
-        # Convert long format datasets
-        # -----------------------------------------------------
         if (
             "parameter" in df.columns
             and "messwert" in df.columns
@@ -167,9 +155,6 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
             ).reset_index()
     
     
-        # -----------------------------------------------------
-        # Pollutant normalization
-        # -----------------------------------------------------
         pollutant_mapping = {
     
             "pm10": [
@@ -214,11 +199,6 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
             ]
         }
     
-    
-        # -----------------------------------------------------
-        # Melt everything into:
-        # date_time | station_id | pollutant | value | geometry
-        # -----------------------------------------------------
         parts = []
     
         for pollutant, candidates in pollutant_mapping.items():
@@ -230,8 +210,8 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
     
                 keep = [
                     "date_time",
-                    "station_id",
-                    "station_name",
+                    "stationId",
+                    "stationName",
                     column
                 ]
     
@@ -271,20 +251,12 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
     
         dataframes.append(df)
     
-    
-    # ---------------------------------------------------------
-    # Combine datasets
-    # ---------------------------------------------------------
     dataframe = pd.concat(
         dataframes,
         ignore_index=True,
         sort=False
     )
     
-    
-    # ---------------------------------------------------------
-    # Geometry
-    # ---------------------------------------------------------
     def safe_load(x):
         try:
             geom = wkb.loads(x)
@@ -294,9 +266,7 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
         except Exception:
             return None
     
-    
     dataframe["geometry"] = None
-    
     
     if "geo_point_2d" in dataframe.columns:
     
@@ -325,9 +295,6 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
         crs="EPSG:4326"
     )
     
-    # ---------------------------------------------------------
-    # Boundaries
-    # ---------------------------------------------------------
     gdb = (
         ASSETS /
         "swissBOUNDARIES3D_1_5_LV95_LN02.gdb"
@@ -346,11 +313,8 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
         cantons["KANTONSNUMMER"] == 13
     ].to_crs("EPSG:4326")
     
-    # ---------------------------------------------------------
-    # Time filter
-    # ---------------------------------------------------------
     logger.info("Generating daily image...")
-    for day in pd.date_range(start_date, end_date, freq="D"):
+    for day in pd.date_range(startDate, endDate, freq="D"):
 
         if Path( CACHE / f"baselAirQuality-{day.strftime("%Y-%m-%d")}.png").exists():
             logger.debug(f"Day {day.strftime("%Y-%m-%d")} is already cached. Skipping...")
@@ -365,14 +329,11 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
             (geo["date_time"] < next_day)
         ]
         
-        # ---------------------------------------------------------
-        # Average per station
-        # ---------------------------------------------------------
         averaged = (
             geo_day.groupby(
                 [
-                    "station_id",
-                    "station_name",
+                    "stationId",
+                    "stationName",
                     "pollutant",
                     "geometry"
                 ],
@@ -389,12 +350,6 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
             crs="EPSG:4326"
         )
 
-        
-        # ---------------------------------------------------------
-        # Plot
-        # ---------------------------------------------------------
-
-        
         fig, axes = plt.subplots(
             2,
             2,
@@ -418,7 +373,7 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
                 ax.set_visible(False)
                 continue
         
-            vmin, vmax = pollutant_scales[pollutant]
+            vmin, vmax = pollutantScales[pollutant]
         
             subset.plot(
                 ax=ax,
@@ -469,12 +424,12 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
             for _, row in subset.iterrows():
             
                 dx, dy = label_offsets.get(
-                    row["station_name"],
+                    row["stationName"],
                     (0, 8)
                 )
             
                 ax.annotate(
-                    row["station_name"],
+                    row["stationName"],
                     xy=(
                         row.geometry.x,
                         row.geometry.y
@@ -492,7 +447,7 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
                 )
         
             ax.set_title(
-                f"{pollutant} ({pollutant_units[pollutant]})"
+                f"{pollutant} ({pollutantUnits[pollutant]})"
             )
         
             ax.axis("off")
@@ -514,7 +469,7 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
     }
 
     yesterday = date.today() - timedelta(days=1)
-    current = start_date_datetime
+    current = startDateDatetimeFormat
     
     while current <= yesterday:
         dailyEntry = {}
@@ -523,7 +478,7 @@ def generateBaselLuftqualitat(ASSETS, CACHE):
         dailyEntry["date"] = current.isoformat()
         dailyEntry["source"] = "https://luftqualitaet.ch/"
         dailyEntry["url"] = "https://luftqualitaet.ch/"
-        dailyEntry["text"] = f"<img src\"https://resspublica.tomasrivera.ch/images/baselAirQuality-{current.isoformat()}.png\"alt=\"basel air quality {current.isoformat()}\">"
+        dailyEntry["text"] = f"<img src=\"https://resspublica.tomasrivera.ch/images/baselAirQuality-{current.isoformat()}.png\"alt=\"basel air quality {current.isoformat()}\">"
 
         for lang in ["fr", "de", "it", "rm", "en"]:
             dailyEntry["title"] = f"{translatedAirQualityInBasel[lang]} {current.isoformat()}"
