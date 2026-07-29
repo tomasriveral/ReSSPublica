@@ -1,0 +1,1475 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+  <id>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/qualiteDeLAirABale</id>
+  <title>Qualité de l'air à Bâle</title>
+  <updated>2026-07-28T23:59:59+02:00</updated>
+  <author>
+    <name>ReSSPublica</name>
+  </author>
+  <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/qualiteDeLAirABale.atom" rel="self"/>
+  <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
+  <subtitle>Flux RSS des Qualité de l'air à Bâle</subtitle>
+  <entry>
+    <id>air-quality-basel-2026-07-28</id>
+    <title>Qualité de l'air à Bâle 2026-07-28</title>
+    <updated>2026-07-28T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-28.png"alt="basel air quality 2026-07-28"&gt;</content>
+    <published>2026-07-28T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-27</id>
+    <title>Qualité de l'air à Bâle 2026-07-27</title>
+    <updated>2026-07-27T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-27.png"alt="basel air quality 2026-07-27"&gt;</content>
+    <published>2026-07-27T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-26</id>
+    <title>Qualité de l'air à Bâle 2026-07-26</title>
+    <updated>2026-07-26T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-26.png"alt="basel air quality 2026-07-26"&gt;</content>
+    <published>2026-07-26T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-25</id>
+    <title>Qualité de l'air à Bâle 2026-07-25</title>
+    <updated>2026-07-25T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-25.png"alt="basel air quality 2026-07-25"&gt;</content>
+    <published>2026-07-25T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-24</id>
+    <title>Qualité de l'air à Bâle 2026-07-24</title>
+    <updated>2026-07-24T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-24.png"alt="basel air quality 2026-07-24"&gt;</content>
+    <published>2026-07-24T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-23</id>
+    <title>Qualité de l'air à Bâle 2026-07-23</title>
+    <updated>2026-07-23T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-23.png"alt="basel air quality 2026-07-23"&gt;</content>
+    <published>2026-07-23T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-22</id>
+    <title>Qualité de l'air à Bâle 2026-07-22</title>
+    <updated>2026-07-22T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-22.png"alt="basel air quality 2026-07-22"&gt;</content>
+    <published>2026-07-22T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-21</id>
+    <title>Qualité de l'air à Bâle 2026-07-21</title>
+    <updated>2026-07-21T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-21.png"alt="basel air quality 2026-07-21"&gt;</content>
+    <published>2026-07-21T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-20</id>
+    <title>Qualité de l'air à Bâle 2026-07-20</title>
+    <updated>2026-07-20T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-20.png"alt="basel air quality 2026-07-20"&gt;</content>
+    <published>2026-07-20T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-19</id>
+    <title>Qualité de l'air à Bâle 2026-07-19</title>
+    <updated>2026-07-19T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-19.png"alt="basel air quality 2026-07-19"&gt;</content>
+    <published>2026-07-19T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-18</id>
+    <title>Qualité de l'air à Bâle 2026-07-18</title>
+    <updated>2026-07-18T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-18.png"alt="basel air quality 2026-07-18"&gt;</content>
+    <published>2026-07-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-17</id>
+    <title>Qualité de l'air à Bâle 2026-07-17</title>
+    <updated>2026-07-17T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-17.png"alt="basel air quality 2026-07-17"&gt;</content>
+    <published>2026-07-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-16</id>
+    <title>Qualité de l'air à Bâle 2026-07-16</title>
+    <updated>2026-07-16T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-16.png"alt="basel air quality 2026-07-16"&gt;</content>
+    <published>2026-07-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-15</id>
+    <title>Qualité de l'air à Bâle 2026-07-15</title>
+    <updated>2026-07-15T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-15.png"alt="basel air quality 2026-07-15"&gt;</content>
+    <published>2026-07-15T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-14</id>
+    <title>Qualité de l'air à Bâle 2026-07-14</title>
+    <updated>2026-07-14T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-14.png"alt="basel air quality 2026-07-14"&gt;</content>
+    <published>2026-07-14T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-13</id>
+    <title>Qualité de l'air à Bâle 2026-07-13</title>
+    <updated>2026-07-13T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-13.png"alt="basel air quality 2026-07-13"&gt;</content>
+    <published>2026-07-13T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-12</id>
+    <title>Qualité de l'air à Bâle 2026-07-12</title>
+    <updated>2026-07-12T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-12.png"alt="basel air quality 2026-07-12"&gt;</content>
+    <published>2026-07-12T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-11</id>
+    <title>Qualité de l'air à Bâle 2026-07-11</title>
+    <updated>2026-07-11T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-11.png"alt="basel air quality 2026-07-11"&gt;</content>
+    <published>2026-07-11T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-10</id>
+    <title>Qualité de l'air à Bâle 2026-07-10</title>
+    <updated>2026-07-10T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-10.png"alt="basel air quality 2026-07-10"&gt;</content>
+    <published>2026-07-10T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-09</id>
+    <title>Qualité de l'air à Bâle 2026-07-09</title>
+    <updated>2026-07-09T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-09.png"alt="basel air quality 2026-07-09"&gt;</content>
+    <published>2026-07-09T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-08</id>
+    <title>Qualité de l'air à Bâle 2026-07-08</title>
+    <updated>2026-07-08T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-08.png"alt="basel air quality 2026-07-08"&gt;</content>
+    <published>2026-07-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-07</id>
+    <title>Qualité de l'air à Bâle 2026-07-07</title>
+    <updated>2026-07-07T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-07.png"alt="basel air quality 2026-07-07"&gt;</content>
+    <published>2026-07-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-06</id>
+    <title>Qualité de l'air à Bâle 2026-07-06</title>
+    <updated>2026-07-06T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-06.png"alt="basel air quality 2026-07-06"&gt;</content>
+    <published>2026-07-06T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-05</id>
+    <title>Qualité de l'air à Bâle 2026-07-05</title>
+    <updated>2026-07-05T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-05.png"alt="basel air quality 2026-07-05"&gt;</content>
+    <published>2026-07-05T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-04</id>
+    <title>Qualité de l'air à Bâle 2026-07-04</title>
+    <updated>2026-07-04T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-04.png"alt="basel air quality 2026-07-04"&gt;</content>
+    <published>2026-07-04T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-03</id>
+    <title>Qualité de l'air à Bâle 2026-07-03</title>
+    <updated>2026-07-03T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-03.png"alt="basel air quality 2026-07-03"&gt;</content>
+    <published>2026-07-03T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-02</id>
+    <title>Qualité de l'air à Bâle 2026-07-02</title>
+    <updated>2026-07-02T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-02.png"alt="basel air quality 2026-07-02"&gt;</content>
+    <published>2026-07-02T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-07-01</id>
+    <title>Qualité de l'air à Bâle 2026-07-01</title>
+    <updated>2026-07-01T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-07-01.png"alt="basel air quality 2026-07-01"&gt;</content>
+    <published>2026-07-01T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-30</id>
+    <title>Qualité de l'air à Bâle 2026-06-30</title>
+    <updated>2026-06-30T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-30.png"alt="basel air quality 2026-06-30"&gt;</content>
+    <published>2026-06-30T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-29</id>
+    <title>Qualité de l'air à Bâle 2026-06-29</title>
+    <updated>2026-06-29T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-29.png"alt="basel air quality 2026-06-29"&gt;</content>
+    <published>2026-06-29T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-28</id>
+    <title>Qualité de l'air à Bâle 2026-06-28</title>
+    <updated>2026-06-28T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-28.png"alt="basel air quality 2026-06-28"&gt;</content>
+    <published>2026-06-28T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-27</id>
+    <title>Qualité de l'air à Bâle 2026-06-27</title>
+    <updated>2026-06-27T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-27.png"alt="basel air quality 2026-06-27"&gt;</content>
+    <published>2026-06-27T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-26</id>
+    <title>Qualité de l'air à Bâle 2026-06-26</title>
+    <updated>2026-06-26T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-26.png"alt="basel air quality 2026-06-26"&gt;</content>
+    <published>2026-06-26T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-25</id>
+    <title>Qualité de l'air à Bâle 2026-06-25</title>
+    <updated>2026-06-25T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-25.png"alt="basel air quality 2026-06-25"&gt;</content>
+    <published>2026-06-25T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-24</id>
+    <title>Qualité de l'air à Bâle 2026-06-24</title>
+    <updated>2026-06-24T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-24.png"alt="basel air quality 2026-06-24"&gt;</content>
+    <published>2026-06-24T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-23</id>
+    <title>Qualité de l'air à Bâle 2026-06-23</title>
+    <updated>2026-06-23T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-23.png"alt="basel air quality 2026-06-23"&gt;</content>
+    <published>2026-06-23T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-22</id>
+    <title>Qualité de l'air à Bâle 2026-06-22</title>
+    <updated>2026-06-22T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-22.png"alt="basel air quality 2026-06-22"&gt;</content>
+    <published>2026-06-22T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-21</id>
+    <title>Qualité de l'air à Bâle 2026-06-21</title>
+    <updated>2026-06-21T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-21.png"alt="basel air quality 2026-06-21"&gt;</content>
+    <published>2026-06-21T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-20</id>
+    <title>Qualité de l'air à Bâle 2026-06-20</title>
+    <updated>2026-06-20T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-20.png"alt="basel air quality 2026-06-20"&gt;</content>
+    <published>2026-06-20T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-19</id>
+    <title>Qualité de l'air à Bâle 2026-06-19</title>
+    <updated>2026-06-19T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-19.png"alt="basel air quality 2026-06-19"&gt;</content>
+    <published>2026-06-19T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-18</id>
+    <title>Qualité de l'air à Bâle 2026-06-18</title>
+    <updated>2026-06-18T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-18.png"alt="basel air quality 2026-06-18"&gt;</content>
+    <published>2026-06-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-17</id>
+    <title>Qualité de l'air à Bâle 2026-06-17</title>
+    <updated>2026-06-17T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-17.png"alt="basel air quality 2026-06-17"&gt;</content>
+    <published>2026-06-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-16</id>
+    <title>Qualité de l'air à Bâle 2026-06-16</title>
+    <updated>2026-06-16T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-16.png"alt="basel air quality 2026-06-16"&gt;</content>
+    <published>2026-06-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-15</id>
+    <title>Qualité de l'air à Bâle 2026-06-15</title>
+    <updated>2026-06-15T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-15.png"alt="basel air quality 2026-06-15"&gt;</content>
+    <published>2026-06-15T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-14</id>
+    <title>Qualité de l'air à Bâle 2026-06-14</title>
+    <updated>2026-06-14T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-14.png"alt="basel air quality 2026-06-14"&gt;</content>
+    <published>2026-06-14T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-13</id>
+    <title>Qualité de l'air à Bâle 2026-06-13</title>
+    <updated>2026-06-13T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-13.png"alt="basel air quality 2026-06-13"&gt;</content>
+    <published>2026-06-13T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-12</id>
+    <title>Qualité de l'air à Bâle 2026-06-12</title>
+    <updated>2026-06-12T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-12.png"alt="basel air quality 2026-06-12"&gt;</content>
+    <published>2026-06-12T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-11</id>
+    <title>Qualité de l'air à Bâle 2026-06-11</title>
+    <updated>2026-06-11T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-11.png"alt="basel air quality 2026-06-11"&gt;</content>
+    <published>2026-06-11T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-10</id>
+    <title>Qualité de l'air à Bâle 2026-06-10</title>
+    <updated>2026-06-10T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-10.png"alt="basel air quality 2026-06-10"&gt;</content>
+    <published>2026-06-10T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-09</id>
+    <title>Qualité de l'air à Bâle 2026-06-09</title>
+    <updated>2026-06-09T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-09.png"alt="basel air quality 2026-06-09"&gt;</content>
+    <published>2026-06-09T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-08</id>
+    <title>Qualité de l'air à Bâle 2026-06-08</title>
+    <updated>2026-06-08T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-08.png"alt="basel air quality 2026-06-08"&gt;</content>
+    <published>2026-06-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-07</id>
+    <title>Qualité de l'air à Bâle 2026-06-07</title>
+    <updated>2026-06-07T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-07.png"alt="basel air quality 2026-06-07"&gt;</content>
+    <published>2026-06-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-06</id>
+    <title>Qualité de l'air à Bâle 2026-06-06</title>
+    <updated>2026-06-06T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-06.png"alt="basel air quality 2026-06-06"&gt;</content>
+    <published>2026-06-06T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-05</id>
+    <title>Qualité de l'air à Bâle 2026-06-05</title>
+    <updated>2026-06-05T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-05.png"alt="basel air quality 2026-06-05"&gt;</content>
+    <published>2026-06-05T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-04</id>
+    <title>Qualité de l'air à Bâle 2026-06-04</title>
+    <updated>2026-06-04T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-04.png"alt="basel air quality 2026-06-04"&gt;</content>
+    <published>2026-06-04T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-03</id>
+    <title>Qualité de l'air à Bâle 2026-06-03</title>
+    <updated>2026-06-03T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-03.png"alt="basel air quality 2026-06-03"&gt;</content>
+    <published>2026-06-03T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-02</id>
+    <title>Qualité de l'air à Bâle 2026-06-02</title>
+    <updated>2026-06-02T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-02.png"alt="basel air quality 2026-06-02"&gt;</content>
+    <published>2026-06-02T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-06-01</id>
+    <title>Qualité de l'air à Bâle 2026-06-01</title>
+    <updated>2026-06-01T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-06-01.png"alt="basel air quality 2026-06-01"&gt;</content>
+    <published>2026-06-01T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-31</id>
+    <title>Qualité de l'air à Bâle 2026-05-31</title>
+    <updated>2026-05-31T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-31.png"alt="basel air quality 2026-05-31"&gt;</content>
+    <published>2026-05-31T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-30</id>
+    <title>Qualité de l'air à Bâle 2026-05-30</title>
+    <updated>2026-05-30T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-30.png"alt="basel air quality 2026-05-30"&gt;</content>
+    <published>2026-05-30T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-29</id>
+    <title>Qualité de l'air à Bâle 2026-05-29</title>
+    <updated>2026-05-29T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-29.png"alt="basel air quality 2026-05-29"&gt;</content>
+    <published>2026-05-29T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-28</id>
+    <title>Qualité de l'air à Bâle 2026-05-28</title>
+    <updated>2026-05-28T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-28.png"alt="basel air quality 2026-05-28"&gt;</content>
+    <published>2026-05-28T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-27</id>
+    <title>Qualité de l'air à Bâle 2026-05-27</title>
+    <updated>2026-05-27T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-27.png"alt="basel air quality 2026-05-27"&gt;</content>
+    <published>2026-05-27T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-26</id>
+    <title>Qualité de l'air à Bâle 2026-05-26</title>
+    <updated>2026-05-26T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-26.png"alt="basel air quality 2026-05-26"&gt;</content>
+    <published>2026-05-26T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-25</id>
+    <title>Qualité de l'air à Bâle 2026-05-25</title>
+    <updated>2026-05-25T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-25.png"alt="basel air quality 2026-05-25"&gt;</content>
+    <published>2026-05-25T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-24</id>
+    <title>Qualité de l'air à Bâle 2026-05-24</title>
+    <updated>2026-05-24T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-24.png"alt="basel air quality 2026-05-24"&gt;</content>
+    <published>2026-05-24T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-23</id>
+    <title>Qualité de l'air à Bâle 2026-05-23</title>
+    <updated>2026-05-23T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-23.png"alt="basel air quality 2026-05-23"&gt;</content>
+    <published>2026-05-23T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-22</id>
+    <title>Qualité de l'air à Bâle 2026-05-22</title>
+    <updated>2026-05-22T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-22.png"alt="basel air quality 2026-05-22"&gt;</content>
+    <published>2026-05-22T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-21</id>
+    <title>Qualité de l'air à Bâle 2026-05-21</title>
+    <updated>2026-05-21T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-21.png"alt="basel air quality 2026-05-21"&gt;</content>
+    <published>2026-05-21T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-20</id>
+    <title>Qualité de l'air à Bâle 2026-05-20</title>
+    <updated>2026-05-20T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-20.png"alt="basel air quality 2026-05-20"&gt;</content>
+    <published>2026-05-20T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-19</id>
+    <title>Qualité de l'air à Bâle 2026-05-19</title>
+    <updated>2026-05-19T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-19.png"alt="basel air quality 2026-05-19"&gt;</content>
+    <published>2026-05-19T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-18</id>
+    <title>Qualité de l'air à Bâle 2026-05-18</title>
+    <updated>2026-05-18T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-18.png"alt="basel air quality 2026-05-18"&gt;</content>
+    <published>2026-05-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-17</id>
+    <title>Qualité de l'air à Bâle 2026-05-17</title>
+    <updated>2026-05-17T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-17.png"alt="basel air quality 2026-05-17"&gt;</content>
+    <published>2026-05-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-16</id>
+    <title>Qualité de l'air à Bâle 2026-05-16</title>
+    <updated>2026-05-16T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-16.png"alt="basel air quality 2026-05-16"&gt;</content>
+    <published>2026-05-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-15</id>
+    <title>Qualité de l'air à Bâle 2026-05-15</title>
+    <updated>2026-05-15T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-15.png"alt="basel air quality 2026-05-15"&gt;</content>
+    <published>2026-05-15T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-14</id>
+    <title>Qualité de l'air à Bâle 2026-05-14</title>
+    <updated>2026-05-14T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-14.png"alt="basel air quality 2026-05-14"&gt;</content>
+    <published>2026-05-14T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-13</id>
+    <title>Qualité de l'air à Bâle 2026-05-13</title>
+    <updated>2026-05-13T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-13.png"alt="basel air quality 2026-05-13"&gt;</content>
+    <published>2026-05-13T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-12</id>
+    <title>Qualité de l'air à Bâle 2026-05-12</title>
+    <updated>2026-05-12T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-12.png"alt="basel air quality 2026-05-12"&gt;</content>
+    <published>2026-05-12T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-11</id>
+    <title>Qualité de l'air à Bâle 2026-05-11</title>
+    <updated>2026-05-11T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-11.png"alt="basel air quality 2026-05-11"&gt;</content>
+    <published>2026-05-11T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-10</id>
+    <title>Qualité de l'air à Bâle 2026-05-10</title>
+    <updated>2026-05-10T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-10.png"alt="basel air quality 2026-05-10"&gt;</content>
+    <published>2026-05-10T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-09</id>
+    <title>Qualité de l'air à Bâle 2026-05-09</title>
+    <updated>2026-05-09T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-09.png"alt="basel air quality 2026-05-09"&gt;</content>
+    <published>2026-05-09T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-08</id>
+    <title>Qualité de l'air à Bâle 2026-05-08</title>
+    <updated>2026-05-08T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-08.png"alt="basel air quality 2026-05-08"&gt;</content>
+    <published>2026-05-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-07</id>
+    <title>Qualité de l'air à Bâle 2026-05-07</title>
+    <updated>2026-05-07T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-07.png"alt="basel air quality 2026-05-07"&gt;</content>
+    <published>2026-05-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-06</id>
+    <title>Qualité de l'air à Bâle 2026-05-06</title>
+    <updated>2026-05-06T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-06.png"alt="basel air quality 2026-05-06"&gt;</content>
+    <published>2026-05-06T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-05</id>
+    <title>Qualité de l'air à Bâle 2026-05-05</title>
+    <updated>2026-05-05T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-05.png"alt="basel air quality 2026-05-05"&gt;</content>
+    <published>2026-05-05T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-04</id>
+    <title>Qualité de l'air à Bâle 2026-05-04</title>
+    <updated>2026-05-04T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-04.png"alt="basel air quality 2026-05-04"&gt;</content>
+    <published>2026-05-04T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-03</id>
+    <title>Qualité de l'air à Bâle 2026-05-03</title>
+    <updated>2026-05-03T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-03.png"alt="basel air quality 2026-05-03"&gt;</content>
+    <published>2026-05-03T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-02</id>
+    <title>Qualité de l'air à Bâle 2026-05-02</title>
+    <updated>2026-05-02T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-02.png"alt="basel air quality 2026-05-02"&gt;</content>
+    <published>2026-05-02T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-05-01</id>
+    <title>Qualité de l'air à Bâle 2026-05-01</title>
+    <updated>2026-05-01T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-05-01.png"alt="basel air quality 2026-05-01"&gt;</content>
+    <published>2026-05-01T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-30</id>
+    <title>Qualité de l'air à Bâle 2026-04-30</title>
+    <updated>2026-04-30T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-30.png"alt="basel air quality 2026-04-30"&gt;</content>
+    <published>2026-04-30T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-29</id>
+    <title>Qualité de l'air à Bâle 2026-04-29</title>
+    <updated>2026-04-29T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-29.png"alt="basel air quality 2026-04-29"&gt;</content>
+    <published>2026-04-29T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-28</id>
+    <title>Qualité de l'air à Bâle 2026-04-28</title>
+    <updated>2026-04-28T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-28.png"alt="basel air quality 2026-04-28"&gt;</content>
+    <published>2026-04-28T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-27</id>
+    <title>Qualité de l'air à Bâle 2026-04-27</title>
+    <updated>2026-04-27T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-27.png"alt="basel air quality 2026-04-27"&gt;</content>
+    <published>2026-04-27T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-26</id>
+    <title>Qualité de l'air à Bâle 2026-04-26</title>
+    <updated>2026-04-26T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-26.png"alt="basel air quality 2026-04-26"&gt;</content>
+    <published>2026-04-26T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-25</id>
+    <title>Qualité de l'air à Bâle 2026-04-25</title>
+    <updated>2026-04-25T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-25.png"alt="basel air quality 2026-04-25"&gt;</content>
+    <published>2026-04-25T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-24</id>
+    <title>Qualité de l'air à Bâle 2026-04-24</title>
+    <updated>2026-04-24T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-24.png"alt="basel air quality 2026-04-24"&gt;</content>
+    <published>2026-04-24T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-23</id>
+    <title>Qualité de l'air à Bâle 2026-04-23</title>
+    <updated>2026-04-23T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-23.png"alt="basel air quality 2026-04-23"&gt;</content>
+    <published>2026-04-23T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-22</id>
+    <title>Qualité de l'air à Bâle 2026-04-22</title>
+    <updated>2026-04-22T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-22.png"alt="basel air quality 2026-04-22"&gt;</content>
+    <published>2026-04-22T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-21</id>
+    <title>Qualité de l'air à Bâle 2026-04-21</title>
+    <updated>2026-04-21T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-21.png"alt="basel air quality 2026-04-21"&gt;</content>
+    <published>2026-04-21T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-20</id>
+    <title>Qualité de l'air à Bâle 2026-04-20</title>
+    <updated>2026-04-20T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-20.png"alt="basel air quality 2026-04-20"&gt;</content>
+    <published>2026-04-20T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-19</id>
+    <title>Qualité de l'air à Bâle 2026-04-19</title>
+    <updated>2026-04-19T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-19.png"alt="basel air quality 2026-04-19"&gt;</content>
+    <published>2026-04-19T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-18</id>
+    <title>Qualité de l'air à Bâle 2026-04-18</title>
+    <updated>2026-04-18T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-18.png"alt="basel air quality 2026-04-18"&gt;</content>
+    <published>2026-04-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-17</id>
+    <title>Qualité de l'air à Bâle 2026-04-17</title>
+    <updated>2026-04-17T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-17.png"alt="basel air quality 2026-04-17"&gt;</content>
+    <published>2026-04-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-16</id>
+    <title>Qualité de l'air à Bâle 2026-04-16</title>
+    <updated>2026-04-16T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-16.png"alt="basel air quality 2026-04-16"&gt;</content>
+    <published>2026-04-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-15</id>
+    <title>Qualité de l'air à Bâle 2026-04-15</title>
+    <updated>2026-04-15T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-15.png"alt="basel air quality 2026-04-15"&gt;</content>
+    <published>2026-04-15T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-14</id>
+    <title>Qualité de l'air à Bâle 2026-04-14</title>
+    <updated>2026-04-14T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-14.png"alt="basel air quality 2026-04-14"&gt;</content>
+    <published>2026-04-14T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-13</id>
+    <title>Qualité de l'air à Bâle 2026-04-13</title>
+    <updated>2026-04-13T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-13.png"alt="basel air quality 2026-04-13"&gt;</content>
+    <published>2026-04-13T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-12</id>
+    <title>Qualité de l'air à Bâle 2026-04-12</title>
+    <updated>2026-04-12T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-12.png"alt="basel air quality 2026-04-12"&gt;</content>
+    <published>2026-04-12T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-11</id>
+    <title>Qualité de l'air à Bâle 2026-04-11</title>
+    <updated>2026-04-11T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-11.png"alt="basel air quality 2026-04-11"&gt;</content>
+    <published>2026-04-11T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-10</id>
+    <title>Qualité de l'air à Bâle 2026-04-10</title>
+    <updated>2026-04-10T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-10.png"alt="basel air quality 2026-04-10"&gt;</content>
+    <published>2026-04-10T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-09</id>
+    <title>Qualité de l'air à Bâle 2026-04-09</title>
+    <updated>2026-04-09T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-09.png"alt="basel air quality 2026-04-09"&gt;</content>
+    <published>2026-04-09T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-08</id>
+    <title>Qualité de l'air à Bâle 2026-04-08</title>
+    <updated>2026-04-08T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-08.png"alt="basel air quality 2026-04-08"&gt;</content>
+    <published>2026-04-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-07</id>
+    <title>Qualité de l'air à Bâle 2026-04-07</title>
+    <updated>2026-04-07T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-07.png"alt="basel air quality 2026-04-07"&gt;</content>
+    <published>2026-04-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-06</id>
+    <title>Qualité de l'air à Bâle 2026-04-06</title>
+    <updated>2026-04-06T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-06.png"alt="basel air quality 2026-04-06"&gt;</content>
+    <published>2026-04-06T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-05</id>
+    <title>Qualité de l'air à Bâle 2026-04-05</title>
+    <updated>2026-04-05T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-05.png"alt="basel air quality 2026-04-05"&gt;</content>
+    <published>2026-04-05T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-04</id>
+    <title>Qualité de l'air à Bâle 2026-04-04</title>
+    <updated>2026-04-04T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-04.png"alt="basel air quality 2026-04-04"&gt;</content>
+    <published>2026-04-04T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-03</id>
+    <title>Qualité de l'air à Bâle 2026-04-03</title>
+    <updated>2026-04-03T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-03.png"alt="basel air quality 2026-04-03"&gt;</content>
+    <published>2026-04-03T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-02</id>
+    <title>Qualité de l'air à Bâle 2026-04-02</title>
+    <updated>2026-04-02T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-02.png"alt="basel air quality 2026-04-02"&gt;</content>
+    <published>2026-04-02T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-04-01</id>
+    <title>Qualité de l'air à Bâle 2026-04-01</title>
+    <updated>2026-04-01T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-04-01.png"alt="basel air quality 2026-04-01"&gt;</content>
+    <published>2026-04-01T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-31</id>
+    <title>Qualité de l'air à Bâle 2026-03-31</title>
+    <updated>2026-03-31T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-31.png"alt="basel air quality 2026-03-31"&gt;</content>
+    <published>2026-03-31T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-30</id>
+    <title>Qualité de l'air à Bâle 2026-03-30</title>
+    <updated>2026-03-30T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-30.png"alt="basel air quality 2026-03-30"&gt;</content>
+    <published>2026-03-30T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-29</id>
+    <title>Qualité de l'air à Bâle 2026-03-29</title>
+    <updated>2026-03-29T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-29.png"alt="basel air quality 2026-03-29"&gt;</content>
+    <published>2026-03-29T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-28</id>
+    <title>Qualité de l'air à Bâle 2026-03-28</title>
+    <updated>2026-03-28T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-28.png"alt="basel air quality 2026-03-28"&gt;</content>
+    <published>2026-03-28T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-27</id>
+    <title>Qualité de l'air à Bâle 2026-03-27</title>
+    <updated>2026-03-27T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-27.png"alt="basel air quality 2026-03-27"&gt;</content>
+    <published>2026-03-27T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-26</id>
+    <title>Qualité de l'air à Bâle 2026-03-26</title>
+    <updated>2026-03-26T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-26.png"alt="basel air quality 2026-03-26"&gt;</content>
+    <published>2026-03-26T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-25</id>
+    <title>Qualité de l'air à Bâle 2026-03-25</title>
+    <updated>2026-03-25T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-25.png"alt="basel air quality 2026-03-25"&gt;</content>
+    <published>2026-03-25T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-24</id>
+    <title>Qualité de l'air à Bâle 2026-03-24</title>
+    <updated>2026-03-24T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-24.png"alt="basel air quality 2026-03-24"&gt;</content>
+    <published>2026-03-24T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-23</id>
+    <title>Qualité de l'air à Bâle 2026-03-23</title>
+    <updated>2026-03-23T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-23.png"alt="basel air quality 2026-03-23"&gt;</content>
+    <published>2026-03-23T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-22</id>
+    <title>Qualité de l'air à Bâle 2026-03-22</title>
+    <updated>2026-03-22T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-22.png"alt="basel air quality 2026-03-22"&gt;</content>
+    <published>2026-03-22T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-21</id>
+    <title>Qualité de l'air à Bâle 2026-03-21</title>
+    <updated>2026-03-21T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-21.png"alt="basel air quality 2026-03-21"&gt;</content>
+    <published>2026-03-21T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-20</id>
+    <title>Qualité de l'air à Bâle 2026-03-20</title>
+    <updated>2026-03-20T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-20.png"alt="basel air quality 2026-03-20"&gt;</content>
+    <published>2026-03-20T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-19</id>
+    <title>Qualité de l'air à Bâle 2026-03-19</title>
+    <updated>2026-03-19T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-19.png"alt="basel air quality 2026-03-19"&gt;</content>
+    <published>2026-03-19T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-18</id>
+    <title>Qualité de l'air à Bâle 2026-03-18</title>
+    <updated>2026-03-18T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-18.png"alt="basel air quality 2026-03-18"&gt;</content>
+    <published>2026-03-18T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-17</id>
+    <title>Qualité de l'air à Bâle 2026-03-17</title>
+    <updated>2026-03-17T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-17.png"alt="basel air quality 2026-03-17"&gt;</content>
+    <published>2026-03-17T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-16</id>
+    <title>Qualité de l'air à Bâle 2026-03-16</title>
+    <updated>2026-03-16T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-16.png"alt="basel air quality 2026-03-16"&gt;</content>
+    <published>2026-03-16T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-15</id>
+    <title>Qualité de l'air à Bâle 2026-03-15</title>
+    <updated>2026-03-15T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-15.png"alt="basel air quality 2026-03-15"&gt;</content>
+    <published>2026-03-15T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-14</id>
+    <title>Qualité de l'air à Bâle 2026-03-14</title>
+    <updated>2026-03-14T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-14.png"alt="basel air quality 2026-03-14"&gt;</content>
+    <published>2026-03-14T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-13</id>
+    <title>Qualité de l'air à Bâle 2026-03-13</title>
+    <updated>2026-03-13T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-13.png"alt="basel air quality 2026-03-13"&gt;</content>
+    <published>2026-03-13T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-12</id>
+    <title>Qualité de l'air à Bâle 2026-03-12</title>
+    <updated>2026-03-12T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-12.png"alt="basel air quality 2026-03-12"&gt;</content>
+    <published>2026-03-12T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-11</id>
+    <title>Qualité de l'air à Bâle 2026-03-11</title>
+    <updated>2026-03-11T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-11.png"alt="basel air quality 2026-03-11"&gt;</content>
+    <published>2026-03-11T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-10</id>
+    <title>Qualité de l'air à Bâle 2026-03-10</title>
+    <updated>2026-03-10T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-10.png"alt="basel air quality 2026-03-10"&gt;</content>
+    <published>2026-03-10T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-09</id>
+    <title>Qualité de l'air à Bâle 2026-03-09</title>
+    <updated>2026-03-09T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-09.png"alt="basel air quality 2026-03-09"&gt;</content>
+    <published>2026-03-09T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-08</id>
+    <title>Qualité de l'air à Bâle 2026-03-08</title>
+    <updated>2026-03-08T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-08.png"alt="basel air quality 2026-03-08"&gt;</content>
+    <published>2026-03-08T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-07</id>
+    <title>Qualité de l'air à Bâle 2026-03-07</title>
+    <updated>2026-03-07T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-07.png"alt="basel air quality 2026-03-07"&gt;</content>
+    <published>2026-03-07T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-06</id>
+    <title>Qualité de l'air à Bâle 2026-03-06</title>
+    <updated>2026-03-06T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-06.png"alt="basel air quality 2026-03-06"&gt;</content>
+    <published>2026-03-06T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-05</id>
+    <title>Qualité de l'air à Bâle 2026-03-05</title>
+    <updated>2026-03-05T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-05.png"alt="basel air quality 2026-03-05"&gt;</content>
+    <published>2026-03-05T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-04</id>
+    <title>Qualité de l'air à Bâle 2026-03-04</title>
+    <updated>2026-03-04T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-04.png"alt="basel air quality 2026-03-04"&gt;</content>
+    <published>2026-03-04T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-03</id>
+    <title>Qualité de l'air à Bâle 2026-03-03</title>
+    <updated>2026-03-03T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-03.png"alt="basel air quality 2026-03-03"&gt;</content>
+    <published>2026-03-03T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-02</id>
+    <title>Qualité de l'air à Bâle 2026-03-02</title>
+    <updated>2026-03-02T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-02.png"alt="basel air quality 2026-03-02"&gt;</content>
+    <published>2026-03-02T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-03-01</id>
+    <title>Qualité de l'air à Bâle 2026-03-01</title>
+    <updated>2026-03-01T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-03-01.png"alt="basel air quality 2026-03-01"&gt;</content>
+    <published>2026-03-01T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-28</id>
+    <title>Qualité de l'air à Bâle 2026-02-28</title>
+    <updated>2026-02-28T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-28.png"alt="basel air quality 2026-02-28"&gt;</content>
+    <published>2026-02-28T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-27</id>
+    <title>Qualité de l'air à Bâle 2026-02-27</title>
+    <updated>2026-02-27T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-27.png"alt="basel air quality 2026-02-27"&gt;</content>
+    <published>2026-02-27T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-26</id>
+    <title>Qualité de l'air à Bâle 2026-02-26</title>
+    <updated>2026-02-26T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-26.png"alt="basel air quality 2026-02-26"&gt;</content>
+    <published>2026-02-26T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-25</id>
+    <title>Qualité de l'air à Bâle 2026-02-25</title>
+    <updated>2026-02-25T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-25.png"alt="basel air quality 2026-02-25"&gt;</content>
+    <published>2026-02-25T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-24</id>
+    <title>Qualité de l'air à Bâle 2026-02-24</title>
+    <updated>2026-02-24T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-24.png"alt="basel air quality 2026-02-24"&gt;</content>
+    <published>2026-02-24T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-23</id>
+    <title>Qualité de l'air à Bâle 2026-02-23</title>
+    <updated>2026-02-23T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-23.png"alt="basel air quality 2026-02-23"&gt;</content>
+    <published>2026-02-23T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-22</id>
+    <title>Qualité de l'air à Bâle 2026-02-22</title>
+    <updated>2026-02-22T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-22.png"alt="basel air quality 2026-02-22"&gt;</content>
+    <published>2026-02-22T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-21</id>
+    <title>Qualité de l'air à Bâle 2026-02-21</title>
+    <updated>2026-02-21T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-21.png"alt="basel air quality 2026-02-21"&gt;</content>
+    <published>2026-02-21T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-20</id>
+    <title>Qualité de l'air à Bâle 2026-02-20</title>
+    <updated>2026-02-20T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-20.png"alt="basel air quality 2026-02-20"&gt;</content>
+    <published>2026-02-20T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-19</id>
+    <title>Qualité de l'air à Bâle 2026-02-19</title>
+    <updated>2026-02-19T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-19.png"alt="basel air quality 2026-02-19"&gt;</content>
+    <published>2026-02-19T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-18</id>
+    <title>Qualité de l'air à Bâle 2026-02-18</title>
+    <updated>2026-02-18T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-18.png"alt="basel air quality 2026-02-18"&gt;</content>
+    <published>2026-02-18T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-17</id>
+    <title>Qualité de l'air à Bâle 2026-02-17</title>
+    <updated>2026-02-17T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-17.png"alt="basel air quality 2026-02-17"&gt;</content>
+    <published>2026-02-17T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-16</id>
+    <title>Qualité de l'air à Bâle 2026-02-16</title>
+    <updated>2026-02-16T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-16.png"alt="basel air quality 2026-02-16"&gt;</content>
+    <published>2026-02-16T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-15</id>
+    <title>Qualité de l'air à Bâle 2026-02-15</title>
+    <updated>2026-02-15T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-15.png"alt="basel air quality 2026-02-15"&gt;</content>
+    <published>2026-02-15T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-14</id>
+    <title>Qualité de l'air à Bâle 2026-02-14</title>
+    <updated>2026-02-14T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-14.png"alt="basel air quality 2026-02-14"&gt;</content>
+    <published>2026-02-14T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-13</id>
+    <title>Qualité de l'air à Bâle 2026-02-13</title>
+    <updated>2026-02-13T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-13.png"alt="basel air quality 2026-02-13"&gt;</content>
+    <published>2026-02-13T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-12</id>
+    <title>Qualité de l'air à Bâle 2026-02-12</title>
+    <updated>2026-02-12T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-12.png"alt="basel air quality 2026-02-12"&gt;</content>
+    <published>2026-02-12T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-11</id>
+    <title>Qualité de l'air à Bâle 2026-02-11</title>
+    <updated>2026-02-11T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-11.png"alt="basel air quality 2026-02-11"&gt;</content>
+    <published>2026-02-11T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-10</id>
+    <title>Qualité de l'air à Bâle 2026-02-10</title>
+    <updated>2026-02-10T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-10.png"alt="basel air quality 2026-02-10"&gt;</content>
+    <published>2026-02-10T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-09</id>
+    <title>Qualité de l'air à Bâle 2026-02-09</title>
+    <updated>2026-02-09T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-09.png"alt="basel air quality 2026-02-09"&gt;</content>
+    <published>2026-02-09T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-08</id>
+    <title>Qualité de l'air à Bâle 2026-02-08</title>
+    <updated>2026-02-08T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-08.png"alt="basel air quality 2026-02-08"&gt;</content>
+    <published>2026-02-08T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-07</id>
+    <title>Qualité de l'air à Bâle 2026-02-07</title>
+    <updated>2026-02-07T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-07.png"alt="basel air quality 2026-02-07"&gt;</content>
+    <published>2026-02-07T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-06</id>
+    <title>Qualité de l'air à Bâle 2026-02-06</title>
+    <updated>2026-02-06T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-06.png"alt="basel air quality 2026-02-06"&gt;</content>
+    <published>2026-02-06T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-05</id>
+    <title>Qualité de l'air à Bâle 2026-02-05</title>
+    <updated>2026-02-05T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-05.png"alt="basel air quality 2026-02-05"&gt;</content>
+    <published>2026-02-05T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-04</id>
+    <title>Qualité de l'air à Bâle 2026-02-04</title>
+    <updated>2026-02-04T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-04.png"alt="basel air quality 2026-02-04"&gt;</content>
+    <published>2026-02-04T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-03</id>
+    <title>Qualité de l'air à Bâle 2026-02-03</title>
+    <updated>2026-02-03T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-03.png"alt="basel air quality 2026-02-03"&gt;</content>
+    <published>2026-02-03T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-02</id>
+    <title>Qualité de l'air à Bâle 2026-02-02</title>
+    <updated>2026-02-02T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-02.png"alt="basel air quality 2026-02-02"&gt;</content>
+    <published>2026-02-02T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-02-01</id>
+    <title>Qualité de l'air à Bâle 2026-02-01</title>
+    <updated>2026-02-01T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-02-01.png"alt="basel air quality 2026-02-01"&gt;</content>
+    <published>2026-02-01T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-31</id>
+    <title>Qualité de l'air à Bâle 2026-01-31</title>
+    <updated>2026-01-31T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-31.png"alt="basel air quality 2026-01-31"&gt;</content>
+    <published>2026-01-31T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-30</id>
+    <title>Qualité de l'air à Bâle 2026-01-30</title>
+    <updated>2026-01-30T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-30.png"alt="basel air quality 2026-01-30"&gt;</content>
+    <published>2026-01-30T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-29</id>
+    <title>Qualité de l'air à Bâle 2026-01-29</title>
+    <updated>2026-01-29T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-29.png"alt="basel air quality 2026-01-29"&gt;</content>
+    <published>2026-01-29T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-28</id>
+    <title>Qualité de l'air à Bâle 2026-01-28</title>
+    <updated>2026-01-28T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-28.png"alt="basel air quality 2026-01-28"&gt;</content>
+    <published>2026-01-28T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-27</id>
+    <title>Qualité de l'air à Bâle 2026-01-27</title>
+    <updated>2026-01-27T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-27.png"alt="basel air quality 2026-01-27"&gt;</content>
+    <published>2026-01-27T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-26</id>
+    <title>Qualité de l'air à Bâle 2026-01-26</title>
+    <updated>2026-01-26T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-26.png"alt="basel air quality 2026-01-26"&gt;</content>
+    <published>2026-01-26T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-25</id>
+    <title>Qualité de l'air à Bâle 2026-01-25</title>
+    <updated>2026-01-25T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-25.png"alt="basel air quality 2026-01-25"&gt;</content>
+    <published>2026-01-25T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-24</id>
+    <title>Qualité de l'air à Bâle 2026-01-24</title>
+    <updated>2026-01-24T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-24.png"alt="basel air quality 2026-01-24"&gt;</content>
+    <published>2026-01-24T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-23</id>
+    <title>Qualité de l'air à Bâle 2026-01-23</title>
+    <updated>2026-01-23T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-23.png"alt="basel air quality 2026-01-23"&gt;</content>
+    <published>2026-01-23T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-22</id>
+    <title>Qualité de l'air à Bâle 2026-01-22</title>
+    <updated>2026-01-22T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-22.png"alt="basel air quality 2026-01-22"&gt;</content>
+    <published>2026-01-22T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-21</id>
+    <title>Qualité de l'air à Bâle 2026-01-21</title>
+    <updated>2026-01-21T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-21.png"alt="basel air quality 2026-01-21"&gt;</content>
+    <published>2026-01-21T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-20</id>
+    <title>Qualité de l'air à Bâle 2026-01-20</title>
+    <updated>2026-01-20T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-20.png"alt="basel air quality 2026-01-20"&gt;</content>
+    <published>2026-01-20T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-19</id>
+    <title>Qualité de l'air à Bâle 2026-01-19</title>
+    <updated>2026-01-19T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-19.png"alt="basel air quality 2026-01-19"&gt;</content>
+    <published>2026-01-19T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-18</id>
+    <title>Qualité de l'air à Bâle 2026-01-18</title>
+    <updated>2026-01-18T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-18.png"alt="basel air quality 2026-01-18"&gt;</content>
+    <published>2026-01-18T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-17</id>
+    <title>Qualité de l'air à Bâle 2026-01-17</title>
+    <updated>2026-01-17T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-17.png"alt="basel air quality 2026-01-17"&gt;</content>
+    <published>2026-01-17T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-16</id>
+    <title>Qualité de l'air à Bâle 2026-01-16</title>
+    <updated>2026-01-16T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-16.png"alt="basel air quality 2026-01-16"&gt;</content>
+    <published>2026-01-16T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-15</id>
+    <title>Qualité de l'air à Bâle 2026-01-15</title>
+    <updated>2026-01-15T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-15.png"alt="basel air quality 2026-01-15"&gt;</content>
+    <published>2026-01-15T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-14</id>
+    <title>Qualité de l'air à Bâle 2026-01-14</title>
+    <updated>2026-01-14T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-14.png"alt="basel air quality 2026-01-14"&gt;</content>
+    <published>2026-01-14T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-13</id>
+    <title>Qualité de l'air à Bâle 2026-01-13</title>
+    <updated>2026-01-13T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-13.png"alt="basel air quality 2026-01-13"&gt;</content>
+    <published>2026-01-13T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-12</id>
+    <title>Qualité de l'air à Bâle 2026-01-12</title>
+    <updated>2026-01-12T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-12.png"alt="basel air quality 2026-01-12"&gt;</content>
+    <published>2026-01-12T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-11</id>
+    <title>Qualité de l'air à Bâle 2026-01-11</title>
+    <updated>2026-01-11T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-11.png"alt="basel air quality 2026-01-11"&gt;</content>
+    <published>2026-01-11T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-10</id>
+    <title>Qualité de l'air à Bâle 2026-01-10</title>
+    <updated>2026-01-10T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-10.png"alt="basel air quality 2026-01-10"&gt;</content>
+    <published>2026-01-10T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-09</id>
+    <title>Qualité de l'air à Bâle 2026-01-09</title>
+    <updated>2026-01-09T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-09.png"alt="basel air quality 2026-01-09"&gt;</content>
+    <published>2026-01-09T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-08</id>
+    <title>Qualité de l'air à Bâle 2026-01-08</title>
+    <updated>2026-01-08T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-08.png"alt="basel air quality 2026-01-08"&gt;</content>
+    <published>2026-01-08T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-07</id>
+    <title>Qualité de l'air à Bâle 2026-01-07</title>
+    <updated>2026-01-07T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-07.png"alt="basel air quality 2026-01-07"&gt;</content>
+    <published>2026-01-07T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-06</id>
+    <title>Qualité de l'air à Bâle 2026-01-06</title>
+    <updated>2026-01-06T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-06.png"alt="basel air quality 2026-01-06"&gt;</content>
+    <published>2026-01-06T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-05</id>
+    <title>Qualité de l'air à Bâle 2026-01-05</title>
+    <updated>2026-01-05T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-05.png"alt="basel air quality 2026-01-05"&gt;</content>
+    <published>2026-01-05T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-04</id>
+    <title>Qualité de l'air à Bâle 2026-01-04</title>
+    <updated>2026-01-04T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-04.png"alt="basel air quality 2026-01-04"&gt;</content>
+    <published>2026-01-04T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-03</id>
+    <title>Qualité de l'air à Bâle 2026-01-03</title>
+    <updated>2026-01-03T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-03.png"alt="basel air quality 2026-01-03"&gt;</content>
+    <published>2026-01-03T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-02</id>
+    <title>Qualité de l'air à Bâle 2026-01-02</title>
+    <updated>2026-01-02T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-02.png"alt="basel air quality 2026-01-02"&gt;</content>
+    <published>2026-01-02T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>air-quality-basel-2026-01-01</id>
+    <title>Qualité de l'air à Bâle 2026-01-01</title>
+    <updated>2026-01-01T00:00:00+01:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-01-01.png"alt="basel air quality 2026-01-01"&gt;</content>
+    <published>2026-01-01T00:00:00+01:00</published>
+  </entry>
+</feed>
