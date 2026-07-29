@@ -131,8 +131,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.verbose }}" = "true" ]; then
             echo "Running in VERBOSE mode"
-              resspublica --gen_baselLuftqualitat --verbose
-            fi
+            resspublica --gen_baselLuftqualitat --verbose
           else
             resspublica --gen_baselLuftqualitat
           fi
