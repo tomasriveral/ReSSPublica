@@ -2,13 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
   <id>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/luftqualitatInBasel</id>
   <title>Luftqualität in Basel</title>
-  <updated>2026-08-10T23:59:59+02:00</updated>
+  <updated>2026-08-11T23:59:59+02:00</updated>
   <author>
     <name>ReSSPublica</name>
   </author>
   <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/de/luftqualitatInBasel.atom" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <subtitle>RSS-Feed für Luftqualität in Basel</subtitle>
+  <entry>
+    <id>air-quality-basel-2026-08-11</id>
+    <title>Luftqualität in Basel 2026-08-11</title>
+    <updated>2026-08-11T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-08-11.png"alt="basel air quality 2026-08-11"&gt;</content>
+    <published>2026-08-11T00:00:00+02:00</published>
+  </entry>
   <entry>
     <id>air-quality-basel-2026-08-10</id>
     <title>Luftqualität in Basel 2026-08-10</title>
