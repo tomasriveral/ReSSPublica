@@ -64,7 +64,7 @@ jobs:
 
       - name: Generate feeds for federal popular initiatives
         run: |
-          if ! [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.ignoreFederalPopularInitiativesFeed }}" = "true"]; then
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ] || [ "${{ inputs.ignoreFederalPopularInitiativesFeed }}" != "true" ]; then
             if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.verbose }}" = "true" ]; then
               echo "Running in VERBOSE mode"
               resspublica --verbose --gen_federalInitiatives
