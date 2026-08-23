@@ -2,13 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
   <id>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/qualiteDeLAirABale</id>
   <title>Qualité de l'air à Bâle</title>
-  <updated>2026-08-21T23:59:59+02:00</updated>
+  <updated>2026-08-22T23:59:59+02:00</updated>
   <author>
     <name>ReSSPublica</name>
   </author>
   <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/fr/qualiteDeLAirABale.atom" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <subtitle>Flux RSS des Qualité de l'air à Bâle</subtitle>
+  <entry>
+    <id>air-quality-basel-2026-08-22</id>
+    <title>Qualité de l'air à Bâle 2026-08-22</title>
+    <updated>2026-08-22T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-08-22.png"alt="basel air quality 2026-08-22"&gt;</content>
+    <published>2026-08-22T00:00:00+02:00</published>
+  </entry>
   <entry>
     <id>air-quality-basel-2026-08-21</id>
     <title>Qualité de l'air à Bâle 2026-08-21</title>
