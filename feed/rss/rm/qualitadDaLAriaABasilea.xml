@@ -8,7 +8,13 @@
     <docs>https://github.com/tomasriveral/ReSSPublica</docs>
     <generator>python-feedgen</generator>
     <language>rm</language>
-    <lastBuildDate>Tue, 01 Sep 2026 23:59:59 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 23:59:59 +0200</lastBuildDate>
+    <item>
+      <title>Qualitad da l'aria a Basilea 2026-09-02</title>
+      <description>&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-09-02.png"alt="basel air quality 2026-09-02"&gt;</description>
+      <guid isPermaLink="false">air-quality-basel-2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0200</pubDate>
+    </item>
     <item>
       <title>Qualitad da l'aria a Basilea 2026-09-01</title>
       <description>&lt;img src="https://resspublica.tomasrivera.ch/images/baselAirQuality-2026-09-01.png"alt="basel air quality 2026-09-01"&gt;</description>
