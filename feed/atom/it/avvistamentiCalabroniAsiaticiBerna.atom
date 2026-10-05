@@ -2,13 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="it">
   <id>https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/it/avvistamentiCalabroniAsiaticiBerna</id>
   <title>Avvistamenti di calabroni asiatici a Berna</title>
-  <updated>2026-09-28T12:39:22.973334+02:00</updated>
+  <updated>2026-10-05T13:19:25.661417+02:00</updated>
   <author>
     <name>ReSSPublica</name>
   </author>
   <link href="https://raw.githubusercontent.com/tomasriveral/ReSSPublica/refs/heads/main/feed/atom/it/avvistamentiCalabroniAsiaticiBerna.atom" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <subtitle>Feed RSS degli avvistamenti di calabroni asiatici a Berna</subtitle>
+  <entry>
+    <id>asian-hornets-bern-2026-09-28-2026-10-04</id>
+    <title>Avvistamenti di calabroni asiatici a Berna 2026-09-28-2026-10-04</title>
+    <updated>2026-10-04T00:00:00+02:00</updated>
+    <content type="html">&lt;img src="https://resspublica.tomasrivera.ch/images/bernAsianHornets-it-2026-09-28-2026-10-04.png" alt="Avvistamenti di calabroni asiatici a Berna 2026-09-28-2026-10-04"&gt;29 avvistamenti</content>
+    <published>2026-10-04T00:00:00+02:00</published>
+  </entry>
   <entry>
     <id>asian-hornets-bern-2026-09-21-2026-09-27</id>
     <title>Avvistamenti di calabroni asiatici a Berna 2026-09-21-2026-09-27</title>
